@@ -14,7 +14,7 @@ const Header = () => {
   const navItems = [
     { name: 'Ana Sayfa', path: '/' },
     { name: 'Ürünler', path: '/urunler' },
-    { name: 'Kategoriler', path: '/kategoriler' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Markalar', path: '/markalar' },
     { name: 'Hakkımızda', path: '/hakkimizda' },
     { name: 'İletişim', path: '/iletisim' },
