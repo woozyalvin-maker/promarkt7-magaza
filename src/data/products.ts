@@ -1,0 +1,331 @@
+import { Product } from '@/types/product';
+import wheyProteinImg from '@/assets/product-whey-protein.jpg';
+import bcaaImg from '@/assets/product-bcaa.jpg';
+import multivitaminImg from '@/assets/product-multivitamin.jpg';
+import creatineImg from '@/assets/product-creatine.jpg';
+import yogaMatImg from '@/assets/product-yoga-mat.jpg';
+import resistanceBandsImg from '@/assets/product-resistance-bands.jpg';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Whey Protein Isolate 2kg',
+    brand: 'ProMarkt Nutrition',
+    category: 'Protein Tozları',
+    price: 899,
+    originalPrice: 1299,
+    discount: 31,
+    image: wheyProteinImg,
+    rating: 4.8,
+    reviewCount: 342,
+    inStock: true,
+    description: 'Yüksek kaliteli whey protein isolate, kas gelişimi ve toparlanma için ideal. Her porsiyonda 28g protein.',
+    features: [
+      '28g protein per porsiyon',
+      'Düşük karbonhidrat ve yağ',
+      'Hızlı emilim',
+      'Lezzetli çikolata aroması',
+      'Orijinal ithal ürün'
+    ],
+    nutritionFacts: {
+      servingSize: '30g',
+      servingsPerContainer: 66,
+      calories: 120,
+      protein: 28,
+      carbs: 2,
+      fat: 1
+    },
+    usage: 'Antrenman sonrası 1 ölçek (30g) 250ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çikolata', 'Vanilya', 'Çilek', 'Muzlu']
+      }
+    ],
+    isBestseller: true
+  },
+  {
+    id: '2',
+    name: 'BCAA 2:1:1 - 300g',
+    brand: 'Muscletech',
+    category: 'Amino Asitler',
+    price: 349,
+    originalPrice: 499,
+    discount: 30,
+    image: bcaaImg,
+    rating: 4.6,
+    reviewCount: 198,
+    inStock: true,
+    description: 'Dallanmış zincirli amino asitler. Antrenman sırasında kas yıkımını önler ve toparlanmayı hızlandırır.',
+    features: [
+      '5g BCAA per porsiyon',
+      '2:1:1 oranı (Leucine:Isoleucine:Valine)',
+      'Antrenman sırasında kullanım',
+      'Tat ve aromasız',
+      'Kolay çözünür'
+    ],
+    usage: 'Antrenman öncesi veya sırasında 1 ölçek (5g) 400ml suya karıştırın.',
+    isBestseller: true
+  },
+  {
+    id: '3',
+    name: 'Multivitamin 60 Tablet',
+    brand: 'Optimum Nutrition',
+    category: 'Vitaminler',
+    price: 199,
+    originalPrice: 279,
+    discount: 29,
+    image: multivitaminImg,
+    rating: 4.7,
+    reviewCount: 445,
+    inStock: true,
+    description: 'Günlük vitamin ve mineral ihtiyacınızı karşılayan kapsamlı multivitamin desteği.',
+    features: [
+      '23 vitamin ve mineral',
+      'Bağışıklık sistemi desteği',
+      'Enerji metabolizması',
+      '2 aylık kullanım',
+      'Yüksek emilim'
+    ],
+    usage: 'Günde 1 tablet, yemekle birlikte alın.',
+    isNew: true
+  },
+  {
+    id: '4',
+    name: 'Kreatin Monohidrat 500g',
+    brand: 'Creapure',
+    category: 'Amino Asitler',
+    price: 299,
+    originalPrice: 399,
+    discount: 25,
+    image: creatineImg,
+    rating: 4.9,
+    reviewCount: 567,
+    inStock: true,
+    description: 'Saf kreatin monohidrat. Güç ve performans artışı için bilimsel olarak kanıtlanmış destek.',
+    features: [
+      '5g saf kreatin per porsiyon',
+      'Creapure® kalitesi',
+      'Aromasız',
+      'Güç ve dayanıklılık artışı',
+      '100 porsiyon'
+    ],
+    usage: 'Günde 5g, bol suyla karıştırarak için.',
+    isBestseller: true
+  },
+  {
+    id: '5',
+    name: 'Yoga Matı Premium',
+    brand: 'ProMarkt Fitness',
+    category: 'Spor Ekipmanları',
+    price: 249,
+    originalPrice: 349,
+    discount: 29,
+    image: yogaMatImg,
+    rating: 4.5,
+    reviewCount: 123,
+    inStock: true,
+    description: 'Kaymaz, yüksek yoğunluklu yoga ve pilates matı. Konforlu ve dayanıklı.',
+    features: [
+      '10mm kalınlık',
+      'Kaymaz yüzey',
+      'Taşıma askısı hediye',
+      '180cm x 60cm',
+      'Kolay temizlenir'
+    ],
+    variants: [
+      {
+        name: 'Renk',
+        options: ['Siyah/Turuncu', 'Mor', 'Mavi', 'Yeşil']
+      }
+    ]
+  },
+  {
+    id: '6',
+    name: 'Direnç Bandı Seti',
+    brand: 'ProMarkt Fitness',
+    category: 'Spor Ekipmanları',
+    price: 179,
+    originalPrice: 249,
+    discount: 28,
+    image: resistanceBandsImg,
+    rating: 4.4,
+    reviewCount: 89,
+    inStock: true,
+    description: '5 farklı direnç seviyesinde elastik band seti. Evde antrenman için ideal.',
+    features: [
+      '5 farklı direnç seviyesi',
+      'Lateks malzeme',
+      'Taşıma çantası dahil',
+      'Kapı ankraj aparatı',
+      'Kullanım kılavuzu'
+    ],
+    isNew: true
+  },
+  {
+    id: '7',
+    name: 'Kazein Protein 1kg',
+    brand: 'Dymatize',
+    category: 'Protein Tozları',
+    price: 649,
+    originalPrice: 849,
+    discount: 24,
+    image: wheyProteinImg,
+    rating: 4.6,
+    reviewCount: 156,
+    inStock: true,
+    description: 'Yavaş emilen kazein proteini. Gece boyunca kas beslenmesi için ideal.',
+    features: [
+      '24g protein per porsiyon',
+      'Yavaş emilim (6-8 saat)',
+      'Gece kullanımı için ideal',
+      'Düşük şeker',
+      'Kremamsı doku'
+    ],
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çikolata', 'Vanilya']
+      }
+    ]
+  },
+  {
+    id: '8',
+    name: 'Glutamin Powder 500g',
+    brand: 'Scitec Nutrition',
+    category: 'Amino Asitler',
+    price: 329,
+    originalPrice: 429,
+    discount: 23,
+    image: bcaaImg,
+    rating: 4.5,
+    reviewCount: 201,
+    inStock: false,
+    description: 'L-Glutamin tozu. Bağışıklık sistemi ve bağırsak sağlığı desteği.',
+    features: [
+      '5g L-Glutamin per porsiyon',
+      'Saf ve aromasız',
+      'Toparlanma desteği',
+      'Bağışıklık güçlendirici',
+      '100 porsiyon'
+    ]
+  },
+  {
+    id: '9',
+    name: 'Omega-3 1000mg',
+    brand: 'Now Foods',
+    category: 'Vitaminler',
+    price: 249,
+    originalPrice: 329,
+    discount: 24,
+    image: multivitaminImg,
+    rating: 4.8,
+    reviewCount: 378,
+    inStock: true,
+    description: 'Yüksek EPA ve DHA içeren omega-3 balık yağı kapsülleri.',
+    features: [
+      '1000mg balık yağı',
+      '300mg EPA + 200mg DHA',
+      'Kalp ve beyin sağlığı',
+      '120 softgel',
+      'Moleküler distile'
+    ]
+  },
+  {
+    id: '10',
+    name: 'Pre-Workout Explosion',
+    brand: 'C4',
+    category: 'Amino Asitler',
+    price: 399,
+    originalPrice: 549,
+    discount: 27,
+    image: creatineImg,
+    rating: 4.7,
+    reviewCount: 289,
+    inStock: true,
+    description: 'Antrenman öncesi enerji ve performans artırıcı formül.',
+    features: [
+      'Beta-alanin ve kreatin',
+      'Kafein ve arginin',
+      'Enerji ve odaklanma',
+      'Pump etkisi',
+      '30 porsiyon'
+    ],
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Meyve Punch', 'Yeşil Elma', 'Portakal']
+      }
+    ],
+    isBestseller: true
+  },
+  {
+    id: '11',
+    name: 'Protein Bar 12li Paket',
+    brand: 'Quest Nutrition',
+    category: 'Protein Tozları',
+    price: 279,
+    originalPrice: 349,
+    discount: 20,
+    image: wheyProteinImg,
+    rating: 4.4,
+    reviewCount: 167,
+    inStock: true,
+    description: 'Yüksek proteinli, düşük şekerli protein barları.',
+    features: [
+      '20g protein per bar',
+      'Düşük şeker (1g)',
+      'Lezzetli ve doyurucu',
+      '12 adet kutu',
+      'Pratik atıştırmalık'
+    ],
+    variants: [
+      {
+        name: 'Tat',
+        options: ['Çikolata', 'Fıstık Ezmesi', 'Kurabiye']
+      }
+    ]
+  },
+  {
+    id: '12',
+    name: 'D3 Vitamini 5000 IU',
+    brand: 'Solgar',
+    category: 'Vitaminler',
+    price: 189,
+    originalPrice: 249,
+    discount: 24,
+    image: multivitaminImg,
+    rating: 4.9,
+    reviewCount: 512,
+    inStock: true,
+    description: 'Yüksek doz D3 vitamini. Kemik ve bağışıklık sistemi sağlığı.',
+    features: [
+      '5000 IU vitamin D3',
+      'Softgel kapsül',
+      'Kolay yutulur',
+      '120 kapsül',
+      '4 aylık kullanım'
+    ],
+    isNew: true
+  }
+];
+
+export const categories = [
+  { name: 'Protein Tozları', icon: '💪', count: 45 },
+  { name: 'Amino Asitler', icon: '⚡', count: 32 },
+  { name: 'Vitaminler', icon: '🌿', count: 28 },
+  { name: 'Spor Ekipmanları', icon: '🏋️', count: 56 },
+  { name: 'Spor Giyim', icon: '👕', count: 38 },
+  { name: 'Aksesuarlar', icon: '🎒', count: 24 }
+];
+
+export const brands = [
+  'Optimum Nutrition',
+  'Muscletech',
+  'Dymatize',
+  'Scitec Nutrition',
+  'BSN',
+  'MyProtein',
+  'Cellucor',
+  'ProMarkt Nutrition'
+];
