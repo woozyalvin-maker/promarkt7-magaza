@@ -99,7 +99,7 @@ const Blog = () => {
           <span className="text-foreground"> Blog</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Fitness, beslenme ve spor takviyeleri hakkında uzman içerikleri keşfedin
+          Fitness, beslenme ve spor takviyeleri hakkında uzman içerikleri keşfedin.
         </p>
       </div>
 
