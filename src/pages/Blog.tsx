@@ -93,7 +93,11 @@ const Blog = () => {
       <div className="container-custom py-12">
       {/* Hero Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">ProMarkt7 Blog</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="text-foreground">ProMarkt</span>
+          <span className="text-primary">7</span>
+          <span className="text-foreground"> Blog</span>
+        </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Fitness, beslenme ve spor takviyeleri hakkında uzman içerikleri keşfedin
         </p>
