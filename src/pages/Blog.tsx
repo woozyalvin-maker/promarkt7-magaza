@@ -179,7 +179,7 @@ const Blog = () => {
                   <User className="h-4 w-4" />
                   <span>{post.author}</span>
                 </div>
-                <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                <Button variant="ghost" size="sm">
                   Oku
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>

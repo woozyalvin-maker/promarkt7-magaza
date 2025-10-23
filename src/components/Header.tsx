@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold flex items-center gap-0">
-            <span className="text-secondary">ProMarkt</span>
+            <span className="text-foreground">ProMarkt</span>
             <span className="text-primary">7</span>
           </Link>
 
