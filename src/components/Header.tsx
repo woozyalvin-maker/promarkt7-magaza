@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Search, ShoppingCart, User, Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,8 +8,17 @@ import { useState } from 'react';
 const Header = () => {
   const { totalItems } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/urunler?search=${encodeURIComponent(searchQuery.trim())}`);
+      setMobileMenuOpen(false);
+    }
+  };
 
   const navItems = [
     { name: 'Ana Sayfa', path: '/' },
@@ -45,7 +54,7 @@ const Header = () => {
 
           {/* Search Bar - Desktop */}
           <div className="hidden md:flex flex-1 max-w-xl">
-            <div className="relative w-full">
+            <form onSubmit={handleSearch} className="relative w-full">
               <Input
                 type="text"
                 placeholder="Ürün ara..."
@@ -54,12 +63,13 @@ const Header = () => {
                 className="w-full pr-10"
               />
               <Button
+                type="submit"
                 size="sm"
                 className="absolute right-1 top-1/2 -translate-y-1/2 h-8"
               >
                 <Search className="h-4 w-4" />
               </Button>
-            </div>
+            </form>
           </div>
 
           {/* Actions */}
@@ -112,7 +122,7 @@ const Header = () => {
           <div className="container-custom py-4">
             {/* Mobile Search */}
             <div className="mb-4">
-              <div className="relative">
+              <form onSubmit={handleSearch} className="relative">
                 <Input
                   type="text"
                   placeholder="Ürün ara..."
@@ -121,12 +131,13 @@ const Header = () => {
                   className="w-full pr-10"
                 />
                 <Button
+                  type="submit"
                   size="sm"
                   className="absolute right-1 top-1/2 -translate-y-1/2 h-8"
                 >
                   <Search className="h-4 w-4" />
                 </Button>
-              </div>
+              </form>
             </div>
 
             {/* Mobile Navigation */}

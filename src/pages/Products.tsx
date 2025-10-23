@@ -19,6 +19,7 @@ import { Card } from '@/components/ui/card';
 const Products = () => {
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get('kategori');
+  const searchQuery = searchParams.get('search');
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
@@ -31,6 +32,17 @@ const Products = () => {
 
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
+
+    // Search filter
+    if (searchQuery && searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(
+        (p) =>
+          p.name.toLowerCase().includes(query) ||
+          p.brand.toLowerCase().includes(query) ||
+          p.category.toLowerCase().includes(query)
+      );
+    }
 
     // Category filter
     if (selectedCategories.length > 0) {
@@ -66,7 +78,7 @@ const Products = () => {
     }
 
     return filtered;
-  }, [selectedCategories, selectedBrands, priceRange, sortBy]);
+  }, [searchQuery, selectedCategories, selectedBrands, priceRange, sortBy]);
 
   const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
@@ -182,10 +194,17 @@ const Products = () => {
               >
                 <SlidersHorizontal className="h-5 w-5" />
               </Button>
-              <p className="text-sm text-muted-foreground">
-                <span className="font-semibold">{filteredProducts.length}</span> ürün
-                bulundu
-              </p>
+              <div>
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-semibold">{filteredProducts.length}</span> ürün
+                  bulundu
+                </p>
+                {searchQuery && (
+                  <p className="text-sm text-muted-foreground mt-1">
+                    "<span className="font-semibold">{searchQuery}</span>" için sonuçlar
+                  </p>
+                )}
+              </div>
             </div>
 
             <div className="flex items-center gap-3">
