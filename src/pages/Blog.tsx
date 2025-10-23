@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import blogProtein from '@/assets/blog-protein.jpg';
+import blogEquipment from '@/assets/blog-equipment.jpg';
+import blogBcaa from '@/assets/blog-bcaa.jpg';
+import blogWorkout from '@/assets/blog-workout.jpg';
+import blogCreatine from '@/assets/blog-creatine.jpg';
+import blogNutrition from '@/assets/blog-nutrition.jpg';
+import blogBg from '@/assets/blog-bg.jpg';
 
 const blogPosts = [
   {
     id: 1,
     title: 'Protein Tozu Kullanımında Bilmeniz Gerekenler',
     excerpt: 'Protein tozu kullanımı hakkında merak ettiğiniz her şey. Doğru zamanlama, dozaj ve en etkili kullanım yöntemleri.',
-    image: '/placeholder.svg',
+    image: blogProtein,
     category: 'Beslenme',
     author: 'Ahmet Yılmaz',
     date: '15 Mart 2025',
@@ -19,7 +26,7 @@ const blogPosts = [
     id: 2,
     title: 'Evde Spor İçin En İyi Ekipmanlar',
     excerpt: 'Evde etkili antrenmanlar için ihtiyacınız olan temel ekipmanlar ve kullanım önerileri.',
-    image: '/placeholder.svg',
+    image: blogEquipment,
     category: 'Ekipman',
     author: 'Zeynep Demir',
     date: '12 Mart 2025',
@@ -29,7 +36,7 @@ const blogPosts = [
     id: 3,
     title: 'BCAA Nedir? Ne İşe Yarar?',
     excerpt: 'Dal zinciri amino asitleri (BCAA) hakkında bilmeniz gereken her şey ve kas gelişimine etkileri.',
-    image: '/placeholder.svg',
+    image: blogBcaa,
     category: 'Takviyeler',
     author: 'Mehmet Kaya',
     date: '10 Mart 2025',
@@ -39,7 +46,7 @@ const blogPosts = [
     id: 4,
     title: 'Başlangıç Seviyesi İçin Fitness Programı',
     excerpt: 'Spora yeni başlayanlar için hazırlanmış kapsamlı 8 haftalık antrenman programı.',
-    image: '/placeholder.svg',
+    image: blogWorkout,
     category: 'Antrenman',
     author: 'Ayşe Yıldız',
     date: '8 Mart 2025',
@@ -49,7 +56,7 @@ const blogPosts = [
     id: 5,
     title: 'Kreatin Kullanımı ve Faydaları',
     excerpt: 'Kreatin monohidrat kullanımının güç ve performans üzerindeki bilimsel olarak kanıtlanmış etkileri.',
-    image: '/placeholder.svg',
+    image: blogCreatine,
     category: 'Takviyeler',
     author: 'Can Öztürk',
     date: '5 Mart 2025',
@@ -59,7 +66,7 @@ const blogPosts = [
     id: 6,
     title: 'Vücut Geliştirmede Beslenme İlkeleri',
     excerpt: 'Kas kütlesi artırmak ve yağ yakmak için uygulamanız gereken temel beslenme stratejileri.',
-    image: '/placeholder.svg',
+    image: blogNutrition,
     category: 'Beslenme',
     author: 'Ahmet Yılmaz',
     date: '3 Mart 2025',
@@ -71,7 +78,19 @@ const categories = ['Tümü', 'Beslenme', 'Antrenman', 'Takviyeler', 'Ekipman'];
 
 const Blog = () => {
   return (
-    <div className="container-custom py-12">
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 -z-10 opacity-30"
+        style={{
+          backgroundImage: `url(${blogBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+      
+      <div className="container-custom py-12">
       {/* Hero Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">ProMarkt7 Blog</h1>
@@ -176,6 +195,7 @@ const Blog = () => {
           Daha Fazla Göster
         </Button>
       </div>
+    </div>
     </div>
   );
 };
