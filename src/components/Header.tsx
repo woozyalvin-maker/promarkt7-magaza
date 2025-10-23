@@ -15,7 +15,6 @@ const Header = () => {
     { name: 'Ana Sayfa', path: '/' },
     { name: 'Ürünler', path: '/urunler' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Markalar', path: '/markalar' },
     { name: 'Hakkımızda', path: '/hakkimizda' },
     { name: 'İletişim', path: '/iletisim' },
   ];
