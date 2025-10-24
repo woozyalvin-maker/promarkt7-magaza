@@ -121,7 +121,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/promarkt7?igsh=MXMyZW02M2E2aGZjcg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
