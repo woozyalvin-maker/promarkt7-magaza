@@ -54,11 +54,6 @@ const Footer = () => {
                   Ödeme Seçenekleri
                 </Link>
               </li>
-              <li>
-                <Link to="/garanti" className="hover:text-primary transition-colors">
-                  Orijinallik Garantisi
-                </Link>
-              </li>
             </ul>
           </div>
 
