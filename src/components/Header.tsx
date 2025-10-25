@@ -39,7 +39,7 @@ const Header = () => {
             <Phone className="h-4 w-4" />
             <span>+90 (555) 123 45 67</span>
           </div>
-          <span>Ücretsiz Kargo - 500₺ Üzeri Siparişlerde</span>
+          <span>500₺ Üzeri Siparişlerde - Ücretsiz Kargo</span>
         </div>
       </div>
 
