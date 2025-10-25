@@ -130,7 +130,6 @@ const Footer = () => {
               <span>Visa</span>
               <span>Mastercard</span>
               <span>Troy</span>
-              <span>PayPal</span>
             </div>
           </div>
         </div>
