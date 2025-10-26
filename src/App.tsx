@@ -13,6 +13,7 @@ import Checkout from "./pages/Checkout";
 import Blog from "./pages/Blog";
 import Hakkimizda from "./pages/Hakkimizda";
 import SSS from "./pages/SSS";
+import Iletisim from "./pages/Iletisim";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/hakkimizda" element={<Hakkimizda />} />
               <Route path="/sss" element={<SSS />} />
+              <Route path="/iletisim" element={<Iletisim />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
