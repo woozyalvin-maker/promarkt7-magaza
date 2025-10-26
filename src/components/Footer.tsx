@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, CreditCard } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -126,10 +126,19 @@ const Footer = () => {
               © {currentYear} ProMarkt7. Tüm hakları saklıdır.
             </p>
             
-            <div className="flex gap-4 text-xs">
-              <span>Visa</span>
-              <span>Mastercard</span>
-              <span>Troy</span>
+            <div className="flex gap-3 text-xs">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded">
+                <CreditCard className="h-4 w-4" />
+                <span>Visa</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded">
+                <CreditCard className="h-4 w-4" />
+                <span>Mastercard</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded">
+                <CreditCard className="h-4 w-4" />
+                <span>Troy</span>
+              </div>
             </div>
           </div>
         </div>
