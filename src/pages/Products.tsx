@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Grid, List, SlidersHorizontal } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
@@ -29,6 +29,13 @@ const Products = () => {
   const [priceRange, setPriceRange] = useState([0, 2000]);
   const [sortBy, setSortBy] = useState('recommended');
   const [showFilters, setShowFilters] = useState(true);
+
+  // Update selected categories when URL parameter changes
+  useEffect(() => {
+    if (categoryFromUrl) {
+      setSelectedCategories([categoryFromUrl]);
+    }
+  }, [categoryFromUrl]);
 
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
