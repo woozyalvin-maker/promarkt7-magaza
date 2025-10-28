@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import Hakkimizda from "./pages/Hakkimizda";
 import SSS from "./pages/SSS";
 import Iletisim from "./pages/Iletisim";
+import GizlilikPolitikasi from "./pages/GizlilikPolitikasi";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/hakkimizda" element={<Hakkimizda />} />
               <Route path="/sss" element={<SSS />} />
               <Route path="/iletisim" element={<Iletisim />} />
+              <Route path="/gizlilik" element={<GizlilikPolitikasi />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
