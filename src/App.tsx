@@ -35,7 +35,7 @@ const App = () => (
               <Route path="/urunler" element={<Products />} />
               <Route path="/urun/:id" element={<ProductDetail />} />
               <Route path="/sepet" element={<Cart />} />
-              <Route path="/odeme" element={<Checkout />} />
+              <Route path="/siparis-tamamla" element={<Checkout />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/hakkimizda" element={<Hakkimizda />} />
               <Route path="/sss" element={<SSS />} />
@@ -43,7 +43,7 @@ const App = () => (
               <Route path="/gizlilik" element={<GizlilikPolitikasi />} />
               <Route path="/kargo" element={<Kargo />} />
               <Route path="/iade" element={<Iade />} />
-              <Route path="/odeme" element={<Odeme />} />
+              <Route path="/odeme-secenekleri" element={<Odeme />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

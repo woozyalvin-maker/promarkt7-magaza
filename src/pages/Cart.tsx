@@ -157,7 +157,7 @@ const Cart = () => {
               </div>
             </div>
 
-            <Link to="/odeme">
+            <Link to="/siparis-tamamla">
               <Button size="lg" className="w-full mb-3">
                 Ödemeye Geç
               </Button>
