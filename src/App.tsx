@@ -15,6 +15,9 @@ import Hakkimizda from "./pages/Hakkimizda";
 import SSS from "./pages/SSS";
 import Iletisim from "./pages/Iletisim";
 import GizlilikPolitikasi from "./pages/GizlilikPolitikasi";
+import Kargo from "./pages/Kargo";
+import Iade from "./pages/Iade";
+import Odeme from "./pages/Odeme";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +41,9 @@ const App = () => (
               <Route path="/sss" element={<SSS />} />
               <Route path="/iletisim" element={<Iletisim />} />
               <Route path="/gizlilik" element={<GizlilikPolitikasi />} />
+              <Route path="/kargo" element={<Kargo />} />
+              <Route path="/iade" element={<Iade />} />
+              <Route path="/odeme" element={<Odeme />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
