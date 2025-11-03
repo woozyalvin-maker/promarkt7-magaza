@@ -141,7 +141,7 @@ const Iletisim = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Telefon</h3>
-                    <p className="text-muted-foreground">+90 (555) 123 45 67</p>
+                    <p className="text-muted-foreground">+90 (538) 258 21 58</p>
                   </div>
                 </div>
 
