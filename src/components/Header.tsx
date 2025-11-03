@@ -37,7 +37,7 @@ const Header = () => {
         <div className="container-custom py-2 flex items-center justify-between text-sm">
           <div className="flex items-center gap-2">
             <Phone className="h-4 w-4" />
-            <span>+90 (555) 123 45 67</span>
+            <span>+90 (538) 258 21 58</span>
           </div>
           <span>500₺ Üzeri Siparişlerde - Ücretsiz Kargo</span>
         </div>
