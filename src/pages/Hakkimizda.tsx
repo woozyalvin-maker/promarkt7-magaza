@@ -34,7 +34,7 @@ const Hakkimizda = () => {
             <h2 className="text-3xl font-bold mb-6 text-center">BİZ KİMİZ?</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                ProMarkt7, 2020 yılında spor ve fitness tutkusuyla yola çıkan, Türkiye'nin güvenilir sporcu gıdaları ve spor ekipmanları platformudur. Kuruluşumuzdan bu yana tek bir hedefimiz var: Sporcuların ve fitness meraklılarının hedeflerine ulaşması için en kaliteli ürünleri, en uygun fiyatlarla sunmak.
+                ProMarkt7, 2022 yılında spor ve fitness tutkusuyla yola çıkan, Türkiye'nin güvenilir sporcu gıdaları ve spor ekipmanları platformudur. Kuruluşumuzdan bu yana tek bir hedefimiz var: Sporcuların ve fitness meraklılarının hedeflerine ulaşması için en kaliteli ürünleri, en uygun fiyatlarla sunmak.
               </p>
               <p>
                 Spor sadece bir aktivite değil, yaşam tarzıdır. Biz de bu yaşam tarzının her anında yanınızda olmak için buradayız. Protein tozlarından vitaminlere, spor ekipmanlarından sağlıklı atıştırmalıklara kadar geniş ürün yelpazemizle spor yaşamınızı destekliyoruz.
