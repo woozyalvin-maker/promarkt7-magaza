@@ -129,8 +129,8 @@ const Iletisim = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Adres</h3>
                     <p className="text-muted-foreground">
-                      Atatürk Caddesi No:123<br />
-                      Çankaya, Ankara
+                      Mahmutlar mahallesi Barbaros Caddesi No 31/B<br />
+                      Alanya
                     </p>
                   </div>
                 </div>
