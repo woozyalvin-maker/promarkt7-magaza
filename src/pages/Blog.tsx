@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
@@ -77,6 +78,12 @@ const blogPosts = [
 const categories = ['Tümü', 'Beslenme', 'Antrenman', 'Takviyeler', 'Ekipman'];
 
 const Blog = () => {
+  const [selectedCategory, setSelectedCategory] = useState('Tümü');
+
+  const filteredPosts = selectedCategory === 'Tümü' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image */}
@@ -108,8 +115,9 @@ const Blog = () => {
         {categories.map((category) => (
           <Button
             key={category}
-            variant={category === 'Tümü' ? 'default' : 'outline'}
+            variant={category === selectedCategory ? 'default' : 'outline'}
             className="rounded-full"
+            onClick={() => setSelectedCategory(category)}
           >
             {category}
           </Button>
@@ -117,45 +125,47 @@ const Blog = () => {
       </div>
 
       {/* Featured Post */}
-      <Card className="mb-12 overflow-hidden hover-lift">
-        <div className="grid md:grid-cols-2 gap-0">
-          <div className="relative h-64 md:h-auto">
-            <img
-              src={blogPosts[0].image}
-              alt={blogPosts[0].title}
-              className="w-full h-full object-cover"
-            />
-            <Badge className="absolute top-4 left-4">Öne Çıkan</Badge>
-          </div>
-          <div className="p-8 flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-4">
-              <Badge variant="secondary">{blogPosts[0].category}</Badge>
-              <span className="text-sm text-muted-foreground flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
-                {blogPosts[0].date}
-              </span>
+      {filteredPosts.length > 0 && (
+        <Card className="mb-12 overflow-hidden hover-lift">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative h-64 md:h-auto">
+              <img
+                src={filteredPosts[0].image}
+                alt={filteredPosts[0].title}
+                className="w-full h-full object-cover"
+              />
+              <Badge className="absolute top-4 left-4">Öne Çıkan</Badge>
             </div>
-            <h2 className="text-3xl font-bold mb-4">{blogPosts[0].title}</h2>
-            <p className="text-muted-foreground mb-6">{blogPosts[0].excerpt}</p>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <User className="h-4 w-4" />
-                <span>{blogPosts[0].author}</span>
-                <span>•</span>
-                <span>{blogPosts[0].readTime} okuma</span>
+            <div className="p-8 flex flex-col justify-center">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge variant="secondary">{filteredPosts[0].category}</Badge>
+                <span className="text-sm text-muted-foreground flex items-center gap-1">
+                  <Calendar className="h-4 w-4" />
+                  {filteredPosts[0].date}
+                </span>
               </div>
-              <Button>
-                Devamını Oku
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <h2 className="text-3xl font-bold mb-4">{filteredPosts[0].title}</h2>
+              <p className="text-muted-foreground mb-6">{filteredPosts[0].excerpt}</p>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <User className="h-4 w-4" />
+                  <span>{filteredPosts[0].author}</span>
+                  <span>•</span>
+                  <span>{filteredPosts[0].readTime} okuma</span>
+                </div>
+                <Button>
+                  Devamını Oku
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      )}
 
       {/* Blog Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogPosts.slice(1).map((post) => (
+        {filteredPosts.slice(1).map((post) => (
           <Card key={post.id} className="overflow-hidden hover-lift group">
             <div className="relative h-48 overflow-hidden">
               <img
