@@ -55,9 +55,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </div>
 
-        <CardContent className="p-4">
+        <CardContent className="p-4 flex flex-col">
           <p className="text-xs text-muted-foreground mb-1">{product.brand}</p>
-          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors min-h-[3rem]">
             {product.name}
           </h3>
 
@@ -87,7 +87,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="w-full"
+            className="w-full mt-auto"
           >
             <ShoppingCart className="h-4 w-4 mr-2" />
             Sepete Ekle
