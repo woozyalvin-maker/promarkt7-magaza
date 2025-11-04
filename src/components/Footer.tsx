@@ -91,8 +91,7 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">
-                  Mahmutlar mahallesi Barbaros Caddesi No 31/B<br />
-                  Alanya
+                  Mahmutlar mahallesi Barbaros Caddesi No 31/B Alanya
                 </span>
               </li>
               <li className="flex items-center gap-2">
