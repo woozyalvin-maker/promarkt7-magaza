@@ -10,7 +10,7 @@ interface CategoryCardProps {
 const CategoryCard = ({ name, icon, count }: CategoryCardProps) => {
   return (
     <Link to={`/urunler?kategori=${encodeURIComponent(name)}`}>
-      <Card className="p-6 hover-lift cursor-pointer text-center group">
+      <Card className="p-6 hover-lift cursor-pointer text-center group h-full flex flex-col items-center justify-center min-h-[160px]">
         <div className="text-5xl mb-3">{icon}</div>
         <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">
           {name}
