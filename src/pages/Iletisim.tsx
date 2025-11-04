@@ -155,7 +155,7 @@ const Iletisim = () => {
                   </div>
                 </div>
 
-                <div className="bg-secondary p-6 rounded-lg mt-8">
+                <div className="p-6 rounded-lg mt-8 border border-border">
                   <h3 className="font-semibold mb-3">Çalışma Saatleri</h3>
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p>Pazartesi - Cuma: 09:00 - 18:00</p>
