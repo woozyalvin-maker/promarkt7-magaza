@@ -55,9 +55,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </div>
 
-        <CardContent className="p-4 flex flex-col">
+        <CardContent className="p-4 flex flex-col flex-1">
           <p className="text-xs text-muted-foreground mb-1">{product.brand}</p>
-          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors min-h-[3rem]">
+          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
             {product.name}
           </h3>
 
