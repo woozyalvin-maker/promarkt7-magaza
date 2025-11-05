@@ -131,19 +131,23 @@ const Products = () => {
               <h4 className="font-medium mb-3 text-sm">Kategoriler</h4>
               <div className="space-y-2">
                 {categories.map((cat) => (
-                  <div key={cat.name} className="flex items-center gap-2">
+                  <div 
+                    key={cat.name} 
+                    className="flex items-center gap-2 cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleCategory(cat.name);
+                    }}
+                  >
                     <Checkbox
                       id={`cat-${cat.name}`}
                       checked={selectedCategories.includes(cat.name)}
-                      onCheckedChange={() => toggleCategory(cat.name)}
+                      onCheckedChange={() => {}}
+                      onClick={(e) => e.stopPropagation()}
                     />
-                    <label
-                      htmlFor={`cat-${cat.name}`}
-                      className="text-sm cursor-pointer flex-1"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <span className="text-sm flex-1">
                       {cat.name} ({cat.count})
-                    </label>
+                    </span>
                   </div>
                 ))}
               </div>
@@ -154,19 +158,23 @@ const Products = () => {
               <h4 className="font-medium mb-3 text-sm">Markalar</h4>
               <div className="space-y-2">
                 {brands.map((brand) => (
-                  <div key={brand} className="flex items-center gap-2">
+                  <div 
+                    key={brand} 
+                    className="flex items-center gap-2 cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleBrand(brand);
+                    }}
+                  >
                     <Checkbox
                       id={`brand-${brand}`}
                       checked={selectedBrands.includes(brand)}
-                      onCheckedChange={() => toggleBrand(brand)}
+                      onCheckedChange={() => {}}
+                      onClick={(e) => e.stopPropagation()}
                     />
-                    <label
-                      htmlFor={`brand-${brand}`}
-                      className="text-sm cursor-pointer flex-1"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <span className="text-sm flex-1">
                       {brand}
-                    </label>
+                    </span>
                   </div>
                 ))}
               </div>
