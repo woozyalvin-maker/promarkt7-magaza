@@ -137,12 +137,13 @@ const Products = () => {
                       checked={selectedCategories.includes(cat.name)}
                       onCheckedChange={() => toggleCategory(cat.name)}
                     />
-                    <Label
+                    <label
                       htmlFor={`cat-${cat.name}`}
                       className="text-sm cursor-pointer flex-1"
+                      onClick={(e) => e.preventDefault()}
                     >
                       {cat.name} ({cat.count})
-                    </Label>
+                    </label>
                   </div>
                 ))}
               </div>
@@ -159,12 +160,13 @@ const Products = () => {
                       checked={selectedBrands.includes(brand)}
                       onCheckedChange={() => toggleBrand(brand)}
                     />
-                    <Label
+                    <label
                       htmlFor={`brand-${brand}`}
                       className="text-sm cursor-pointer flex-1"
+                      onClick={(e) => e.preventDefault()}
                     >
                       {brand}
-                    </Label>
+                    </label>
                   </div>
                 ))}
               </div>
