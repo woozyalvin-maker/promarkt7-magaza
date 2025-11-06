@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Star, ShoppingCart, Heart, Minus, Plus, ChevronLeft } from 'lucide-react';
+import { Star, ShoppingCart, Heart, Minus, Plus, ChevronLeft, ZoomIn, X } from 'lucide-react';
 import { products } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import ProductCard from '@/components/ProductCard';
 import {
@@ -23,6 +24,7 @@ const ProductDetail = () => {
 
   const [quantity, setQuantity] = useState(1);
   const [selectedVariants, setSelectedVariants] = useState<{ [key: string]: string }>({});
+  const [isImageOpen, setIsImageOpen] = useState(false);
 
   if (!product) {
     return (
@@ -65,13 +67,39 @@ const ProductDetail = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
         {/* Images */}
         <div>
-          <div className="aspect-square bg-muted rounded-lg overflow-hidden mb-4">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <Dialog open={isImageOpen} onOpenChange={setIsImageOpen}>
+            <DialogTrigger asChild>
+              <div className="aspect-square bg-muted rounded-lg overflow-hidden mb-4 cursor-zoom-in group relative">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
+                    <ZoomIn className="h-8 w-8 text-primary" />
+                  </div>
+                </div>
+              </div>
+            </DialogTrigger>
+            <DialogContent className="max-w-5xl w-full p-0 bg-transparent border-none">
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute -top-12 right-0 h-10 w-10 rounded-full bg-white/90 hover:bg-white text-black z-10"
+                  onClick={() => setIsImageOpen(false)}
+                >
+                  <X className="h-6 w-6" />
+                </Button>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
 
         {/* Details */}
