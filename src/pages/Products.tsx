@@ -133,19 +133,17 @@ const Products = () => {
                 {categories.map((cat) => (
                   <div 
                     key={cat.name} 
-                    className="flex items-center gap-2 cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleCategory(cat.name);
-                    }}
+                    className="flex items-center gap-2"
                   >
                     <Checkbox
                       id={`cat-${cat.name}`}
                       checked={selectedCategories.includes(cat.name)}
-                      onCheckedChange={() => {}}
-                      onClick={(e) => e.stopPropagation()}
+                      onCheckedChange={() => toggleCategory(cat.name)}
                     />
-                    <span className="text-sm flex-1">
+                    <span 
+                      className="text-sm flex-1 cursor-pointer select-none"
+                      onClick={() => toggleCategory(cat.name)}
+                    >
                       {cat.name} ({cat.count})
                     </span>
                   </div>
@@ -160,19 +158,17 @@ const Products = () => {
                 {brands.map((brand) => (
                   <div 
                     key={brand} 
-                    className="flex items-center gap-2 cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleBrand(brand);
-                    }}
+                    className="flex items-center gap-2"
                   >
                     <Checkbox
                       id={`brand-${brand}`}
                       checked={selectedBrands.includes(brand)}
-                      onCheckedChange={() => {}}
-                      onClick={(e) => e.stopPropagation()}
+                      onCheckedChange={() => toggleBrand(brand)}
                     />
-                    <span className="text-sm flex-1">
+                    <span 
+                      className="text-sm flex-1 cursor-pointer select-none"
+                      onClick={() => toggleBrand(brand)}
+                    >
                       {brand}
                     </span>
                   </div>
