@@ -33,7 +33,7 @@ const Iletisim = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-secondary py-16">
+      <section className="bg-muted py-16">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
             İletişim
