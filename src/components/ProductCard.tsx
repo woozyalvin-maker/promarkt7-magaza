@@ -20,8 +20,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <Link to={`/urun/${product.id}`}>
-      <Card className="hover-lift cursor-pointer overflow-hidden group h-full">
-        <div className="relative aspect-square overflow-hidden bg-muted">
+      <Card className="hover-lift cursor-pointer overflow-hidden group h-full transition-all duration-300 hover:shadow-[0_10px_40px_-15px_hsl(var(--shadow-hover)/0.3)] hover:border-primary/20">
+        <div className="relative aspect-square overflow-hidden bg-muted transition-colors duration-300 group-hover:bg-muted/80">
           <img
             src={product.image}
             alt={product.name}
@@ -29,19 +29,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
           />
           
           {product.discount && (
-            <Badge className="absolute top-3 right-3 bg-destructive">
+            <Badge className="absolute top-3 right-3 bg-destructive transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
               %{product.discount} İndirim
             </Badge>
           )}
           
           {product.isBestseller && (
-            <Badge className="absolute top-3 left-3 bg-primary">
+            <Badge className="absolute top-3 left-3 bg-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
               Çok Satan
             </Badge>
           )}
           
           {product.isNew && (
-            <Badge className="absolute top-3 left-3 bg-success">
+            <Badge className="absolute top-3 left-3 bg-success transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
               Yeni
             </Badge>
           )}
@@ -56,8 +56,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
 
         <CardContent className="p-4 flex flex-col flex-1">
-          <p className="text-xs text-muted-foreground mb-1">{product.brand}</p>
-          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+          <p className="text-xs text-muted-foreground mb-1 transition-colors duration-300 group-hover:text-primary/70">{product.brand}</p>
+          <h3 className="font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors duration-300">
             {product.name}
           </h3>
 
@@ -87,9 +87,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="w-full mt-auto"
+            className="w-full mt-auto transition-all duration-300 group-hover:scale-105 group-hover:shadow-md"
           >
-            <ShoppingCart className="h-4 w-4 mr-2" />
+            <ShoppingCart className="h-4 w-4 mr-2 transition-transform duration-300 group-hover:rotate-12" />
             Sepete Ekle
           </Button>
         </CardContent>
