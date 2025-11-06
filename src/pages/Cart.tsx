@@ -68,11 +68,11 @@ const Cart = () => {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 transition-all duration-200 hover:scale-110 hover:border-primary hover:shadow-md active:scale-95"
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         disabled={item.quantity <= 1}
                       >
-                        <Minus className="h-3 w-3" />
+                        <Minus className="h-3 w-3 transition-transform duration-200" />
                       </Button>
                       <span className="w-8 text-center font-medium">
                         {item.quantity}
@@ -80,20 +80,20 @@ const Cart = () => {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-8 w-8 transition-all duration-200 hover:scale-110 hover:border-primary hover:shadow-md active:scale-95"
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                       >
-                        <Plus className="h-3 w-3" />
+                        <Plus className="h-3 w-3 transition-transform duration-200" />
                       </Button>
                     </div>
 
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-8 w-8 text-destructive hover:text-destructive"
+                      className="h-8 w-8 text-destructive hover:text-destructive transition-all duration-200 hover:scale-110 hover:bg-destructive/10 active:scale-95"
                       onClick={() => removeFromCart(item.id)}
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-4 w-4 transition-transform duration-200 hover:rotate-12" />
                     </Button>
                   </div>
                 </div>
