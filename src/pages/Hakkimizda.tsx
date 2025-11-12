@@ -18,7 +18,7 @@ const Hakkimizda = () => {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">🏋️ HAKKIMIZDA</h1>
             <p className="text-xl md:text-2xl font-semibold mb-4">
-              PROMARKT7 - SPOR YAŞAMININ ADRESİ
+              PROMARKT<span className="text-primary">7</span> - SPOR YAŞAMININ ADRESİ
             </p>
             <p className="text-lg opacity-90">
               Fitness tutkunu, sporcu ve sağlıklı yaşam arayışındaki herkes için doğru adrestesiniz!
