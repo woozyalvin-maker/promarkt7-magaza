@@ -15,7 +15,7 @@ const Iade = () => {
 
           <div className="space-y-8">
             {/* İade Koşulları */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <RefreshCw className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -46,7 +46,7 @@ const Iade = () => {
             </section>
 
             {/* İade Edilemeyen Ürünler */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <AlertCircle className="h-8 w-8 text-destructive flex-shrink-0 mt-1" />
                 <div>
@@ -73,7 +73,7 @@ const Iade = () => {
             </section>
 
             {/* Değişim Süreci */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Package className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -93,7 +93,7 @@ const Iade = () => {
             </section>
 
             {/* İade Süresi */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Clock className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>

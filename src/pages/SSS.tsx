@@ -98,7 +98,7 @@ const SSS = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border rounded-lg px-6 bg-card"
+                  className="border rounded-lg px-6 bg-card hover-lift"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-6">
                     <span className="font-semibold text-lg">{faq.question}</span>

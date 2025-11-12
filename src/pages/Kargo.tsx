@@ -15,7 +15,7 @@ const Kargo = () => {
 
           <div className="space-y-8">
             {/* Teslimat Süreleri */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Clock className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -39,7 +39,7 @@ const Kargo = () => {
             </section>
 
             {/* Kargo Ücretleri */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Package className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -63,7 +63,7 @@ const Kargo = () => {
             </section>
 
             {/* Teslimat Bölgeleri */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <MapPin className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>

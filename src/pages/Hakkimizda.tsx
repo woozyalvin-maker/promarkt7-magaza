@@ -48,13 +48,13 @@ const Hakkimizda = () => {
       <section className="py-16 bg-secondary/30">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+            <div className="bg-card p-8 rounded-lg shadow-sm hover-lift">
               <h2 className="text-2xl font-bold mb-4">MİSYONUMUZ</h2>
               <p className="text-muted-foreground">
                 Türkiye'de spor yapan herkesin kaliteli, orijinal ve uygun fiyatlı sporcu gıdalarına kolayca ulaşabilmesini sağlamak. Müşterilerimize güvenilir, hızlı ve profesyonel hizmet sunarak spor hedeflerine giden yolda en iyi destekçileri olmak.
               </p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+            <div className="bg-card p-8 rounded-lg shadow-sm hover-lift">
               <h2 className="text-2xl font-bold mb-4">VİZYONUMUZ</h2>
               <p className="text-muted-foreground">
                 Türkiye'nin en çok tercih edilen, güvenilir ve yenilikçi spor ürünleri platformu olmak. Sporcuların ilk tercihi haline gelerek, sağlıklı yaşam ve fitness kültürünün yaygınlaşmasına katkıda bulunmak.
@@ -69,28 +69,28 @@ const Hakkimizda = () => {
         <div className="container-custom">
           <h2 className="text-3xl font-bold mb-12 text-center">DEĞERLERİMİZ</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border border-border hover-lift">
               <CheckCircle className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold mb-3">ORİJİNALLİK</h3>
               <p className="text-muted-foreground text-sm">
                 Sadece orijinal, lisanslı ve güvenilir markaların ürünlerini sunuyoruz. Her ürünümüz kalite güvencesi altındadır.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border border-border hover-lift">
               <Award className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold mb-3">MÜŞTERİ MEMNUNİYETİ</h3>
               <p className="text-muted-foreground text-sm">
                 Müşterilerimizin memnuniyeti bizim için her şeyden önce gelir. 7/24 destek ekibimizle her zaman yanınızdayız.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border border-border hover-lift">
               <Truck className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold mb-3">HIZLI TESLİMAT</h3>
               <p className="text-muted-foreground text-sm">
                 Siparişleriniz en kısa sürede ve güvenli paketleme ile kapınıza ulaşır. Türkiye'nin her yerine hızlı kargo imkanı.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm border border-border">
+            <div className="bg-card p-6 rounded-lg shadow-sm border border-border hover-lift">
               <CreditCard className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold mb-3">UYGUN FİYAT</h3>
               <p className="text-muted-foreground text-sm">
@@ -106,49 +106,49 @@ const Hakkimizda = () => {
         <div className="container-custom">
           <h2 className="text-3xl font-bold mb-12 text-center">NEDEN PROMARKT7'Yİ TERCİH ETMELİSİNİZ?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <Award className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">🏆 GÜVENİLİR MARKALAR</h3>
               <p className="text-muted-foreground text-sm">
                 Dünya çapında tanınmış ve güvenilir sporcu gıdası markalarının Türkiye distribütörüyüz. Optimum Nutrition, MyProtein, Scitec Nutrition, MuscleTech ve daha fazlası...
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <Package className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">📦 GENİŞ ÜRÜN YELPAZESİ</h3>
               <p className="text-muted-foreground text-sm">
                 Protein tozları, amino asitler, vitaminler, spor ekipmanları, sağlıklı atıştırmalıklar ve daha fazlası. Her ihtiyacınız için tek adres.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <Truck className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">🚚 HIZLI & ÜCRETSİZ KARGO</h3>
               <p className="text-muted-foreground text-sm">
                 500₺ ve üzeri alışverişlerinizde kargo bizden! Siparişleriniz 1-3 iş günü içinde kapınızda.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <CreditCard className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">💳 GÜVENLİ ÖDEME</h3>
               <p className="text-muted-foreground text-sm">
                 SSL sertifikalı altyapımızla tüm ödeme bilgileriniz güvende. Kredi kartı, havale/EFT ve kapıda ödeme seçenekleri.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <Gift className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">🎁 ÖZEL KAMPANYALAR</h3>
               <p className="text-muted-foreground text-sm">
                 Düzenli indirimler, kampanyalar ve sadakat programımızla kazanmaya devam edin.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm">
+            <div className="bg-card p-6 rounded-lg shadow-sm hover-lift">
               <Headphones className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">💬 PROFESYONEL DESTEK</h3>
               <p className="text-muted-foreground text-sm">
                 Ürün seçiminden kullanım önerilerine kadar uzman ekibimiz size yardımcı olmaya hazır. WhatsApp, telefon ve e-posta ile 7/24 ulaşın.
               </p>
             </div>
-            <div className="bg-card p-6 rounded-lg shadow-sm md:col-span-2 lg:col-span-1">
+            <div className="bg-card p-6 rounded-lg shadow-sm md:col-span-2 lg:col-span-1 hover-lift">
               <Smartphone className="w-10 h-10 text-primary mb-3" />
               <h3 className="text-lg font-bold mb-2">📱 KOLAY ALIŞVERİŞ</h3>
               <p className="text-muted-foreground text-sm">

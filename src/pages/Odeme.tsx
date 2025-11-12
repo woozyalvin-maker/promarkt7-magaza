@@ -15,7 +15,7 @@ const Odeme = () => {
 
           <div className="space-y-8">
             {/* Kredi Kartı */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <CreditCard className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div className="flex-1">
@@ -60,7 +60,7 @@ const Odeme = () => {
             </section>
 
             {/* Havale/EFT */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Building2 className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -109,7 +109,7 @@ const Odeme = () => {
             </section>
 
             {/* Kapıda Ödeme */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Wallet className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -136,7 +136,7 @@ const Odeme = () => {
             </section>
 
             {/* Güvenlik */}
-            <section className="bg-card p-6 rounded-lg border">
+            <section className="bg-card p-6 rounded-lg border hover-lift">
               <div className="flex items-start gap-4">
                 <Shield className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
                 <div>

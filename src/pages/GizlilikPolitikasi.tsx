@@ -6,7 +6,7 @@ const GizlilikPolitikasi = () => {
       <h1 className="text-4xl font-bold mb-8"><span className="text-primary">Gizlilik</span> Politikası</h1>
       
       <div className="space-y-6">
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>1. Kişisel Verilerin Korunması</CardTitle>
           </CardHeader>
@@ -18,7 +18,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>2. Toplanan Bilgiler</CardTitle>
           </CardHeader>
@@ -34,7 +34,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>3. Bilgilerin Kullanımı</CardTitle>
           </CardHeader>
@@ -50,7 +50,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>4. Bilgi Güvenliği</CardTitle>
           </CardHeader>
@@ -62,7 +62,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>5. Çerezler</CardTitle>
           </CardHeader>
@@ -74,7 +74,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>6. Üçüncü Taraflarla Paylaşım</CardTitle>
           </CardHeader>
@@ -86,7 +86,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>7. Haklarınız</CardTitle>
           </CardHeader>
@@ -103,7 +103,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>8. İletişim</CardTitle>
           </CardHeader>
@@ -118,7 +118,7 @@ const GizlilikPolitikasi = () => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="hover-lift">
           <CardHeader>
             <CardTitle>9. Politika Güncellemeleri</CardTitle>
           </CardHeader>

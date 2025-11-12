@@ -64,25 +64,25 @@ const Index = () => {
       {/* Features */}
       <section className="container-custom py-16 bg-muted/30">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="p-6 text-center">
+          <Card className="p-6 text-center hover-lift">
             <Truck className="h-12 w-12 mx-auto mb-4 text-primary" />
             <h3 className="font-semibold mb-2">Ücretsiz Kargo</h3>
             <p className="text-sm text-muted-foreground">500₺ üzeri siparişlerde</p>
           </Card>
 
-          <Card className="p-6 text-center">
+          <Card className="p-6 text-center hover-lift">
             <Shield className="h-12 w-12 mx-auto mb-4 text-primary" />
             <h3 className="font-semibold mb-2">Orijinal Ürün Garantisi</h3>
             <p className="text-sm text-muted-foreground">%100 orijinal ürünler</p>
           </Card>
 
-          <Card className="p-6 text-center">
+          <Card className="p-6 text-center hover-lift">
             <CreditCard className="h-12 w-12 mx-auto mb-4 text-primary" />
             <h3 className="font-semibold mb-2">Güvenli Ödeme</h3>
             <p className="text-sm text-muted-foreground">Tüm kartlar geçerli</p>
           </Card>
 
-          <Card className="p-6 text-center">
+          <Card className="p-6 text-center hover-lift">
             <Headphones className="h-12 w-12 mx-auto mb-4 text-primary" />
             <h3 className="font-semibold mb-2">7/24 Müşteri Desteği</h3>
             <p className="text-sm text-muted-foreground">Her zaman yanınızdayız</p>

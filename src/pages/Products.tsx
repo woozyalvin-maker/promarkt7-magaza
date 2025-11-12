@@ -110,7 +110,7 @@ const Products = () => {
             showFilters ? 'block' : 'hidden lg:block'
           }`}
         >
-          <Card className="p-6 sticky top-24">
+          <Card className="p-6 sticky top-24 hover-lift">
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-semibold">Filtreler</h3>
               <Button
