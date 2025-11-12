@@ -80,7 +80,7 @@ const SSS = () => {
         <div className="container-custom relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Sık Sorulan Sorular
+              <span className="text-primary">Sık Sorulan</span> Sorular
             </h1>
             <p className="text-lg md:text-xl opacity-90">
               Merak ettiğiniz her şey burada! Sorularınızın cevaplarını bulun.

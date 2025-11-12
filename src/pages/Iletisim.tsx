@@ -36,7 +36,7 @@ const Iletisim = () => {
       <section className="bg-muted py-16">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            İletişim
+            <span className="text-primary">Bizimle</span> İletişim
           </h1>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto">
             Sorularınız için bizimle iletişime geçin. Size yardımcı olmaktan mutluluk duyarız.

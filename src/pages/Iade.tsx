@@ -11,7 +11,7 @@ const Iade = () => {
 
       <div className="container-custom py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">İade ve Değişim</h1>
+          <h1 className="text-4xl font-bold mb-8"><span className="text-primary">İade</span> ve Değişim</h1>
 
           <div className="space-y-8">
             {/* İade Koşulları */}

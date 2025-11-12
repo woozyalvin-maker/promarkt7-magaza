@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const GizlilikPolitikasi = () => {
   return (
     <div className="container-custom py-12">
-      <h1 className="text-4xl font-bold mb-8">Gizlilik Politikası</h1>
+      <h1 className="text-4xl font-bold mb-8"><span className="text-primary">Gizlilik</span> Politikası</h1>
       
       <div className="space-y-6">
         <Card>

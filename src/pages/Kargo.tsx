@@ -11,7 +11,7 @@ const Kargo = () => {
 
       <div className="container-custom py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Kargo ve Teslimat</h1>
+          <h1 className="text-4xl font-bold mb-8"><span className="text-primary">Kargo</span> ve Teslimat</h1>
 
           <div className="space-y-8">
             {/* Teslimat Süreleri */}

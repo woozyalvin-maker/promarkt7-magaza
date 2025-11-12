@@ -18,7 +18,7 @@ const Index = () => {
 
       {/* Categories */}
       <section className="container-custom py-16">
-        <h2 className="text-center mb-8">Kategoriler</h2>
+        <h2 className="text-center mb-8"><span className="text-primary">Ürün</span> Kategoriler</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {categories.map((category) => (
             <CategoryCard
@@ -34,7 +34,7 @@ const Index = () => {
       {/* Featured Products */}
       <section className="container-custom py-16 bg-muted/30">
         <div className="flex items-center justify-between mb-8">
-          <h2>Öne Çıkan Ürünler</h2>
+          <h2><span className="text-primary">Öne Çıkan</span> Ürünler</h2>
           <Link to="/urunler">
             <Button variant="outline">Tümünü Gör</Button>
           </Link>
@@ -49,7 +49,7 @@ const Index = () => {
       {/* Best Sellers */}
       <section className="container-custom py-16">
         <div className="flex items-center justify-between mb-8">
-          <h2>En Çok Satanlar</h2>
+          <h2><span className="text-primary">En Çok</span> Satanlar</h2>
           <Link to="/urunler">
             <Button variant="outline">Tümünü Gör</Button>
           </Link>
@@ -93,7 +93,7 @@ const Index = () => {
       {/* Newsletter */}
       <section className="container-custom py-16">
         <Card className="p-8 md:p-12 text-center bg-gradient-to-r from-primary/10 to-accent/10">
-          <h2 className="mb-4">Kampanyalardan Haberdar Ol</h2>
+          <h2 className="mb-4"><span className="text-primary">Kampanyalardan</span> Haberdar Ol</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             E-posta adresini girerek özel indirimler, yeni ürünler ve kampanyalardan ilk sen haberdar ol.
           </p>
