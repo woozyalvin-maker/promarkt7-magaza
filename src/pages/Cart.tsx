@@ -1,16 +1,36 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
+import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
+import { useEffect } from 'react';
+import { toast } from 'sonner';
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, totalPrice } = useCart();
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      toast.error('Sepeti görüntülemek için giriş yapmalısınız');
+      navigate('/auth');
+    }
+  }, [user, loading, navigate]);
 
   const shippingCost = totalPrice >= 500 ? 0 : 29.9;
   const finalTotal = totalPrice + shippingCost;
+
+  if (loading) {
+    return (
+      <div className="container-custom py-16 flex items-center justify-center min-h-[400px]">
+        <p className="text-muted-foreground">Yükleniyor...</p>
+      </div>
+    );
+  }
 
   if (items.length === 0) {
     return (
