@@ -17,7 +17,7 @@ const profileSchema = z.object({
 });
 
 const Profile = () => {
-  const { user, profile, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -65,6 +65,9 @@ const Profile = () => {
         title: 'Profil güncellendi!',
         description: 'Bilgileriniz başarıyla güncellendi.',
       });
+      
+      // Refresh profile data
+      await refreshProfile();
       
       // Redirect to home page
       setTimeout(() => {
