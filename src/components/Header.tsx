@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useCart } from '@/contexts/CartContext';
 import { useState } from 'react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Header = () => {
   const { totalItems } = useCart();
@@ -74,6 +75,8 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-2">
+            <ThemeToggle />
+            
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <User className="h-5 w-5" />
             </Button>
