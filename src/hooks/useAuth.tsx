@@ -8,10 +8,15 @@ type Profile = {
   last_name: string;
 };
 
+type UserRole = {
+  role: 'admin' | 'user';
+};
+
 export const useAuth = () => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
+  const [userRole, setUserRole] = useState<'admin' | 'user' | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -57,6 +62,17 @@ export const useAuth = () => {
     if (!error && data) {
       setProfile(data);
     }
+
+    // Fetch user role
+    const { data: roleData } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', userId)
+      .single();
+    
+    if (roleData) {
+      setUserRole(roleData.role);
+    }
   };
 
   const refreshProfile = async () => {
@@ -69,5 +85,7 @@ export const useAuth = () => {
     await supabase.auth.signOut();
   };
 
-  return { user, session, profile, loading, signOut, refreshProfile };
+  const isAdmin = userRole === 'admin';
+
+  return { user, session, profile, userRole, isAdmin, loading, signOut, refreshProfile };
 };
