@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CreditCard, Landmark } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
+import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -13,7 +14,15 @@ import { toast } from 'sonner';
 const Checkout = () => {
   const navigate = useNavigate();
   const { items, totalPrice, clearCart } = useCart();
+  const { user, profile, loading } = useAuth();
   const [paymentMethod, setPaymentMethod] = useState('card');
+
+  useEffect(() => {
+    if (!loading && !user) {
+      toast.error('Satın alma işlemi için giriş yapmalısınız');
+      navigate('/auth');
+    }
+  }, [user, loading, navigate]);
 
   const shippingCost = totalPrice >= 500 ? 0 : 29.9;
   const finalTotal = totalPrice + shippingCost;
@@ -32,6 +41,14 @@ const Checkout = () => {
     return null;
   }
 
+  if (loading) {
+    return (
+      <div className="container-custom py-8 flex items-center justify-center min-h-[400px]">
+        <p className="text-muted-foreground">Yükleniyor...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="container-custom py-8">
       <h1 className="mb-8">Ödeme</h1>
@@ -46,7 +63,12 @@ const Checkout = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="fullName">Ad Soyad *</Label>
-                  <Input id="fullName" required placeholder="Adınız ve soyadınız" />
+                  <Input 
+                    id="fullName" 
+                    required 
+                    placeholder="Adınız ve soyadınız"
+                    defaultValue={profile ? `${profile.first_name} ${profile.last_name}` : ''}
+                  />
                 </div>
                 <div>
                   <Label htmlFor="email">E-posta *</Label>
@@ -55,6 +77,7 @@ const Checkout = () => {
                     type="email"
                     required
                     placeholder="ornek@email.com"
+                    defaultValue={user?.email || ''}
                   />
                 </div>
                 <div className="md:col-span-2">
