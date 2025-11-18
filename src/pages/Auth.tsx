@@ -5,6 +5,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
@@ -22,10 +30,13 @@ const signupSchema = authSchema.extend({
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isResetLoading, setIsResetLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [resetEmail, setResetEmail] = useState('');
+  const [resetDialogOpen, setResetDialogOpen] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -146,6 +157,49 @@ const Auth = () => {
     }
   };
 
+  const handlePasswordReset = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const validated = z.object({
+        email: z.string().trim().email({ message: 'Geçerli bir e-posta adresi giriniz' }),
+      }).parse({ email: resetEmail });
+      
+      setIsResetLoading(true);
+
+      const { error } = await supabase.auth.resetPasswordForEmail(validated.email, {
+        redirectTo: `${window.location.origin}/auth`,
+      });
+
+      if (error) {
+        toast({
+          title: 'Hata',
+          description: error.message,
+          variant: 'destructive',
+        });
+        return;
+      }
+
+      toast({
+        title: 'E-posta gönderildi!',
+        description: 'Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.',
+      });
+      
+      setResetDialogOpen(false);
+      setResetEmail('');
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: 'Geçersiz e-posta',
+          description: error.errors[0].message,
+          variant: 'destructive',
+        });
+      }
+    } finally {
+      setIsResetLoading(false);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -201,6 +255,39 @@ const Auth = () => {
                   <Button type="submit" className="w-full" disabled={isLoading}>
                     {isLoading ? 'Giriş yapılıyor...' : 'Giriş Yap'}
                   </Button>
+                  
+                  <Dialog open={resetDialogOpen} onOpenChange={setResetDialogOpen}>
+                    <DialogTrigger asChild>
+                      <Button variant="link" className="w-full text-sm text-muted-foreground hover:text-primary" type="button">
+                        Şifremi unuttum
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Şifre Sıfırlama</DialogTitle>
+                        <DialogDescription>
+                          E-posta adresinizi girin, size şifre sıfırlama bağlantısı gönderelim.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <form onSubmit={handlePasswordReset} className="space-y-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="reset-email">E-posta</Label>
+                          <Input
+                            id="reset-email"
+                            type="email"
+                            placeholder="ornek@email.com"
+                            value={resetEmail}
+                            onChange={(e) => setResetEmail(e.target.value)}
+                            required
+                            disabled={isResetLoading}
+                          />
+                        </div>
+                        <Button type="submit" className="w-full" disabled={isResetLoading}>
+                          {isResetLoading ? 'Gönderiliyor...' : 'Sıfırlama Bağlantısı Gönder'}
+                        </Button>
+                      </form>
+                    </DialogContent>
+                  </Dialog>
                 </form>
               </TabsContent>
               
