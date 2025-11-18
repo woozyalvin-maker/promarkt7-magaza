@@ -66,13 +66,14 @@ const Profile = () => {
         description: 'Bilgileriniz başarıyla güncellendi.',
       });
       
-      // Refresh profile data
+      // Refresh profile data and wait for it to complete
       await refreshProfile();
       
+      // Wait a bit more to ensure state is updated
+      await new Promise(resolve => setTimeout(resolve, 300));
+      
       // Redirect to home page
-      setTimeout(() => {
-        navigate('/');
-      }, 500);
+      navigate('/');
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
