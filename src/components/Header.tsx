@@ -25,11 +25,22 @@ const Header = () => {
   const { toast } = useToast();
 
   const handleSignOut = async () => {
-    await signOut();
+    const { error } = await signOut();
+    
+    if (error) {
+      toast({
+        title: 'Hata',
+        description: 'Çıkış yapılırken bir hata oluştu.',
+        variant: 'destructive',
+      });
+      return;
+    }
+    
     toast({
       title: 'Çıkış yapıldı',
       description: 'Başarıyla çıkış yaptınız.',
     });
+    
     navigate('/');
   };
 
