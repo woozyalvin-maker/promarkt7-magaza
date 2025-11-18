@@ -20,6 +20,7 @@ import Kargo from "./pages/Kargo";
 import Iade from "./pages/Iade";
 import Odeme from "./pages/Odeme";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
               <Route path="/iade" element={<Iade />} />
               <Route path="/odeme-secenekleri" element={<Odeme />} />
             </Route>
+            <Route path="/auth" element={<Auth />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
