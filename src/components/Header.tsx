@@ -21,7 +21,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const { user, profile, isAdmin, signOut } = useAuth();
+  const { user, profile, isAdmin, signOut, loading } = useAuth();
   const { toast } = useToast();
 
   const handleSignOut = async () => {
@@ -107,9 +107,11 @@ const Header = () => {
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem disabled>
                     <span className="text-sm font-medium">
-                      {profile?.first_name && profile?.last_name 
-                        ? `${profile.first_name} ${profile.last_name}` 
-                        : 'Yükleniyor...'}
+                      {loading
+                        ? 'Yükleniyor...'
+                        : profile?.first_name && profile?.last_name
+                          ? `${profile.first_name} ${profile.last_name}`
+                          : user?.email ?? 'Hesabım'}
                     </span>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
