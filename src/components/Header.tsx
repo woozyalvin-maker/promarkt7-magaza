@@ -107,7 +107,9 @@ const Header = () => {
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem disabled>
                     <span className="text-sm font-medium">
-                      {profile ? `${profile.first_name} ${profile.last_name}` : 'Kullanıcı'}
+                      {profile?.first_name && profile?.last_name 
+                        ? `${profile.first_name} ${profile.last_name}` 
+                        : 'Yükleniyor...'}
                     </span>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
