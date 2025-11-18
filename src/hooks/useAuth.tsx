@@ -57,7 +57,7 @@ export const useAuth = () => {
       .from('profiles')
       .select('*')
       .eq('id', userId)
-      .single();
+      .maybeSingle();
     
     if (!error && data) {
       setProfile(data);
@@ -68,10 +68,12 @@ export const useAuth = () => {
       .from('user_roles')
       .select('role')
       .eq('user_id', userId)
-      .single();
+      .maybeSingle();
     
     if (roleData) {
       setUserRole(roleData.role);
+    } else {
+      setUserRole('user'); // Default role
     }
   };
 
