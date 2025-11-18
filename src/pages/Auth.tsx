@@ -15,10 +15,17 @@ const authSchema = z.object({
   password: z.string().min(6, { message: 'Şifre en az 6 karakter olmalıdır' }).max(72),
 });
 
+const signupSchema = authSchema.extend({
+  firstName: z.string().trim().min(1, { message: 'Ad girilmesi zorunludur' }).max(50),
+  lastName: z.string().trim().min(1, { message: 'Soyad girilmesi zorunludur' }).max(50),
+});
+
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -37,14 +44,18 @@ const Auth = () => {
     e.preventDefault();
     
     try {
-      const validated = authSchema.parse({ email, password });
+      const validated = signupSchema.parse({ email, password, firstName, lastName });
       setIsLoading(true);
 
       const { error } = await supabase.auth.signUp({
         email: validated.email,
         password: validated.password,
         options: {
-          emailRedirectTo: `${window.location.origin}/`
+          emailRedirectTo: `${window.location.origin}/`,
+          data: {
+            first_name: validated.firstName,
+            last_name: validated.lastName,
+          }
         }
       });
 
@@ -195,6 +206,30 @@ const Auth = () => {
               
               <TabsContent value="signup">
                 <form onSubmit={handleSignUp} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="signup-firstname">Ad</Label>
+                    <Input
+                      id="signup-firstname"
+                      type="text"
+                      placeholder="Adınız"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      disabled={isLoading}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="signup-lastname">Soyad</Label>
+                    <Input
+                      id="signup-lastname"
+                      type="text"
+                      placeholder="Soyadınız"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                      disabled={isLoading}
+                    />
+                  </div>
                   <div className="space-y-2">
                     <Label htmlFor="signup-email">E-posta</Label>
                     <Input
