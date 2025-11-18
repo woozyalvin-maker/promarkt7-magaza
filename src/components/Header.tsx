@@ -107,14 +107,9 @@ const Header = () => {
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem disabled>
                     <span className="text-sm font-medium">
-                      {profile ? `${profile.first_name} ${profile.last_name}` : user.email}
+                      {profile ? `${profile.first_name} ${profile.last_name}` : 'Kullanıcı'}
                     </span>
                   </DropdownMenuItem>
-                  {profile && (
-                    <DropdownMenuItem disabled>
-                      <span className="text-xs text-muted-foreground">{user.email}</span>
-                    </DropdownMenuItem>
-                  )}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
                     <Link to="/profil" className="cursor-pointer">
