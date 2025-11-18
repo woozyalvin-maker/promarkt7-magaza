@@ -10,7 +10,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Whey Protein Isolate 2kg',
-    brand: 'ProMarkt Nutrition',
+    brand: 'Optimum Nutrition',
     category: 'Protein Tozları',
     price: 899,
     originalPrice: 1299,
@@ -47,7 +47,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'BCAA 2:1:1 - 300g',
-    brand: 'Muscletech',
+    brand: 'Bjoy',
     category: 'Amino Asitler',
     price: 349,
     originalPrice: 499,
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Multivitamin 60 Tablet',
-    brand: 'Optimum Nutrition',
+    brand: 'Nutrever',
     category: 'Vitaminler',
     price: 199,
     originalPrice: 279,
@@ -93,7 +93,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Kreatin Monohidrat 500g',
-    brand: 'Creapure',
+    brand: 'Nutrend',
     category: 'Amino Asitler',
     price: 299,
     originalPrice: 399,
@@ -116,7 +116,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Yoga Matı Premium',
-    brand: 'ProMarkt Fitness',
+    brand: 'Kevin Lovren',
     category: 'Spor Ekipmanları',
     price: 249,
     originalPrice: 349,
@@ -143,7 +143,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Direnç Bandı Seti',
-    brand: 'ProMarkt Fitness',
+    brand: 'Sat Nutrition',
     category: 'Spor Ekipmanları',
     price: 179,
     originalPrice: 249,
@@ -165,7 +165,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Kazein Protein 1kg',
-    brand: 'Dymatize',
+    brand: 'Sygenix',
     category: 'Protein Tozları',
     price: 649,
     originalPrice: 849,
@@ -192,7 +192,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Glutamin Powder 500g',
-    brand: 'Scitec Nutrition',
+    brand: 'Muscle Pump',
     category: 'Amino Asitler',
     price: 329,
     originalPrice: 429,
@@ -213,7 +213,7 @@ export const products: Product[] = [
   {
     id: '9',
     name: 'Omega-3 1000mg',
-    brand: 'Now Foods',
+    brand: 'Bomb Series',
     category: 'Vitaminler',
     price: 249,
     originalPrice: 329,
@@ -234,7 +234,7 @@ export const products: Product[] = [
   {
     id: '10',
     name: 'Pre-Workout Explosion',
-    brand: 'C4',
+    brand: 'Trec Nutrition',
     category: 'Amino Asitler',
     price: 399,
     originalPrice: 549,
@@ -262,7 +262,7 @@ export const products: Product[] = [
   {
     id: '11',
     name: 'Protein Bar 12li Paket',
-    brand: 'Quest Nutrition',
+    brand: 'Optimum Nutrition',
     category: 'Protein Tozları',
     price: 279,
     originalPrice: 349,
@@ -289,7 +289,7 @@ export const products: Product[] = [
   {
     id: '12',
     name: 'D3 Vitamini 5000 IU',
-    brand: 'Solgar',
+    brand: 'Bjoy',
     category: 'Vitaminler',
     price: 189,
     originalPrice: 249,
@@ -321,11 +321,13 @@ export const categories = [
 
 export const brands = [
   'Optimum Nutrition',
-  'Muscletech',
-  'Dymatize',
-  'Scitec Nutrition',
-  'BSN',
-  'MyProtein',
-  'Cellucor',
-  'ProMarkt Nutrition'
+  'Bjoy',
+  'Nutrever',
+  'Nutrend',
+  'Kevin Lovren',
+  'Sat Nutrition',
+  'Sygenix',
+  'Muscle Pump',
+  'Bomb Series',
+  'Trec Nutrition'
 ];
