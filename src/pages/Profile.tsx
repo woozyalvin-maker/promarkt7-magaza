@@ -9,18 +9,31 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
 import { Helmet } from 'react-helmet';
-import { User, Loader2 } from 'lucide-react';
+import { User, Loader2, Lock } from 'lucide-react';
 
 const profileSchema = z.object({
   firstName: z.string().trim().min(1, { message: 'Ad girilmesi zorunludur' }).max(50),
   lastName: z.string().trim().min(1, { message: 'Soyad girilmesi zorunludur' }).max(50),
 });
 
+const passwordSchema = z.object({
+  currentPassword: z.string().min(6, { message: 'Mevcut şifre en az 6 karakter olmalıdır' }),
+  newPassword: z.string().min(6, { message: 'Yeni şifre en az 6 karakter olmalıdır' }).max(72),
+  confirmPassword: z.string().min(6, { message: 'Şifre tekrarı en az 6 karakter olmalıdır' }),
+}).refine((data) => data.newPassword === data.confirmPassword, {
+  message: "Şifreler eşleşmiyor",
+  path: ["confirmPassword"],
+});
+
 const Profile = () => {
   const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const [isPasswordLoading, setIsPasswordLoading] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -87,6 +100,64 @@ const Profile = () => {
     }
   };
 
+  const handlePasswordChange = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const validated = passwordSchema.parse({ currentPassword, newPassword, confirmPassword });
+      setIsPasswordLoading(true);
+
+      // First verify current password
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: user?.email || '',
+        password: validated.currentPassword,
+      });
+
+      if (signInError) {
+        toast({
+          title: 'Mevcut şifre hatalı',
+          description: 'Lütfen mevcut şifrenizi kontrol edin.',
+          variant: 'destructive',
+        });
+        return;
+      }
+
+      // Update to new password
+      const { error: updateError } = await supabase.auth.updateUser({
+        password: validated.newPassword,
+      });
+
+      if (updateError) {
+        toast({
+          title: 'Şifre değiştirilemedi',
+          description: updateError.message,
+          variant: 'destructive',
+        });
+        return;
+      }
+
+      toast({
+        title: 'Şifre değiştirildi!',
+        description: 'Şifreniz başarıyla güncellendi.',
+      });
+
+      // Clear password fields
+      setCurrentPassword('');
+      setNewPassword('');
+      setConfirmPassword('');
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: 'Geçersiz giriş',
+          description: error.errors[0].message,
+          variant: 'destructive',
+        });
+      }
+    } finally {
+      setIsPasswordLoading(false);
+    }
+  };
+
   if (authLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -103,7 +174,8 @@ const Profile = () => {
       </Helmet>
       
       <div className="min-h-screen py-12 px-4 bg-muted/30">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto space-y-6">
+          {/* Profile Information Card */}
           <Card>
             <CardHeader>
               <div className="flex items-center gap-3 mb-2">
@@ -183,6 +255,83 @@ const Profile = () => {
                     İptal
                   </Button>
                 </div>
+              </form>
+            </CardContent>
+          </Card>
+
+          {/* Password Change Card */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Lock className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <CardTitle>Şifre Değiştir</CardTitle>
+                  <CardDescription className="mt-1">Hesap şifrenizi güncelleyin</CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handlePasswordChange} className="space-y-6">
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="currentPassword">Mevcut Şifre</Label>
+                    <Input
+                      id="currentPassword"
+                      type="password"
+                      placeholder="••••••••"
+                      value={currentPassword}
+                      onChange={(e) => setCurrentPassword(e.target.value)}
+                      required
+                      disabled={isPasswordLoading}
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="newPassword">Yeni Şifre</Label>
+                    <Input
+                      id="newPassword"
+                      type="password"
+                      placeholder="••••••••"
+                      value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      required
+                      disabled={isPasswordLoading}
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Şifre en az 6 karakter olmalıdır
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="confirmPassword">Yeni Şifre Tekrar</Label>
+                    <Input
+                      id="confirmPassword"
+                      type="password"
+                      placeholder="••••••••"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      required
+                      disabled={isPasswordLoading}
+                    />
+                  </div>
+                </div>
+
+                <Button 
+                  type="submit" 
+                  disabled={isPasswordLoading}
+                  className="w-full"
+                >
+                  {isPasswordLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Güncelleniyor...
+                    </>
+                  ) : (
+                    'Şifreyi Güncelle'
+                  )}
+                </Button>
               </form>
             </CardContent>
           </Card>
