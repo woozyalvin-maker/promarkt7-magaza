@@ -21,7 +21,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const { user, profile, signOut } = useAuth();
+  const { user, profile, isAdmin, signOut } = useAuth();
   const { toast } = useToast();
 
   const handleSignOut = async () => {
@@ -113,6 +113,17 @@ const Header = () => {
                     </span>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
+                  {isAdmin && (
+                    <>
+                      <DropdownMenuItem asChild>
+                        <Link to="/admin" className="cursor-pointer">
+                          <User className="mr-2 h-4 w-4" />
+                          Admin Dashboard
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator />
+                    </>
+                  )}
                   <DropdownMenuItem asChild>
                     <Link to="/profil" className="cursor-pointer">
                       <User className="mr-2 h-4 w-4" />
@@ -211,6 +222,47 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* User Menu Items - Mobile */}
+              {user && (
+                <>
+                  <div className="border-t border-border mt-2 pt-2">
+                    <div className="py-2 px-4 text-sm font-medium text-muted-foreground">
+                      {profile?.first_name && profile?.last_name 
+                        ? `${profile.first_name} ${profile.last_name}` 
+                        : 'Yükleniyor...'}
+                    </div>
+                    {isAdmin && (
+                      <Link
+                        to="/admin"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="py-2 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-muted flex items-center gap-2"
+                      >
+                        <User className="h-4 w-4" />
+                        Admin Dashboard
+                      </Link>
+                    )}
+                    <Link
+                      to="/profil"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="py-2 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-muted flex items-center gap-2"
+                    >
+                      <User className="h-4 w-4" />
+                      Profilim
+                    </Link>
+                    <button
+                      onClick={() => {
+                        handleSignOut();
+                        setMobileMenuOpen(false);
+                      }}
+                      className="w-full text-left py-2 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-muted flex items-center gap-2"
+                    >
+                      <LogOut className="h-4 w-4" />
+                      Çıkış Yap
+                    </button>
+                  </div>
+                </>
+              )}
             </nav>
           </div>
         </div>

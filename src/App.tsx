@@ -22,6 +22,7 @@ import Odeme from "./pages/Odeme";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/iade" element={<Iade />} />
               <Route path="/odeme-secenekleri" element={<Odeme />} />
               <Route path="/profil" element={<Profile />} />
+              <Route path="/admin" element={<AdminDashboard />} />
             </Route>
             <Route path="/auth" element={<Auth />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
