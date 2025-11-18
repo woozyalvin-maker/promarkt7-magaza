@@ -57,13 +57,17 @@ const Profile = () => {
       const validated = profileSchema.parse({ firstName, lastName });
       setIsLoading(true);
 
+      if (!user) {
+        throw new Error('Kullanıcı oturumu bulunamadı');
+      }
+
       const { error } = await supabase
         .from('profiles')
-        .update({
+        .upsert({
+          id: user.id,
           first_name: validated.firstName,
           last_name: validated.lastName,
-        })
-        .eq('id', user?.id);
+        });
 
       if (error) {
         toast({
