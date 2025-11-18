@@ -84,7 +84,14 @@ export const useAuth = () => {
   };
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
+    if (!error) {
+      setUser(null);
+      setSession(null);
+      setProfile(null);
+      setUserRole(null);
+    }
+    return { error };
   };
 
   const isAdmin = userRole === 'admin';
