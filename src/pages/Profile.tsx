@@ -9,7 +9,18 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
 import { Helmet } from 'react-helmet';
-import { User, Loader2, Lock } from 'lucide-react';
+import { User, Loader2, Lock, Trash2 } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 const profileSchema = z.object({
   firstName: z.string().trim().min(1, { message: 'Ad girilmesi zorunludur' }).max(50),
@@ -26,9 +37,10 @@ const passwordSchema = z.object({
 });
 
 const Profile = () => {
-  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile, signOut } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [isPasswordLoading, setIsPasswordLoading] = useState(false);
+  const [isDeleteLoading, setIsDeleteLoading] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
@@ -159,6 +171,57 @@ const Profile = () => {
       }
     } finally {
       setIsPasswordLoading(false);
+    }
+  };
+
+  const handleDeleteAccount = async () => {
+    try {
+      setIsDeleteLoading(true);
+
+      if (!user) {
+        throw new Error('Kullanıcı oturumu bulunamadı');
+      }
+
+      // Get the current session token
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (!session) {
+        throw new Error('Oturum bulunamadı');
+      }
+
+      // Call edge function to delete account
+      const response = await fetch(
+        `https://ighzpeklywhpmkwvzqjk.supabase.co/functions/v1/delete-account`,
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Hesap silinirken hata oluştu');
+      }
+
+      toast({
+        title: 'Hesap silindi',
+        description: 'Hesabınız başarıyla silindi.',
+      });
+
+      // Sign out and redirect
+      await signOut();
+      navigate('/');
+    } catch (error: any) {
+      toast({
+        title: 'Hesap silinirken hata oluştu',
+        description: error.message,
+        variant: 'destructive',
+      });
+    } finally {
+      setIsDeleteLoading(false);
     }
   };
 
