@@ -116,6 +116,12 @@ const Header = () => {
                     </DropdownMenuItem>
                   )}
                   <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link to="/profil" className="cursor-pointer">
+                      <User className="mr-2 h-4 w-4" />
+                      Profilim
+                    </Link>
+                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleSignOut}>
                     <LogOut className="mr-2 h-4 w-4" />
                     Çıkış Yap
