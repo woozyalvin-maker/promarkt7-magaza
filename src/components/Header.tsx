@@ -21,7 +21,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const { user, signOut } = useAuth();
+  const { user, profile, signOut } = useAuth();
   const { toast } = useToast();
 
   const handleSignOut = async () => {
@@ -106,8 +106,15 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem disabled>
-                    <span className="text-sm text-muted-foreground">{user.email}</span>
+                    <span className="text-sm font-medium">
+                      {profile ? `${profile.first_name} ${profile.last_name}` : user.email}
+                    </span>
                   </DropdownMenuItem>
+                  {profile && (
+                    <DropdownMenuItem disabled>
+                      <span className="text-xs text-muted-foreground">{user.email}</span>
+                    </DropdownMenuItem>
+                  )}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={handleSignOut}>
                     <LogOut className="mr-2 h-4 w-4" />
