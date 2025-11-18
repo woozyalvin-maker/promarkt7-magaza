@@ -66,8 +66,10 @@ const Profile = () => {
         description: 'Bilgileriniz başarıyla güncellendi.',
       });
       
-      // Refresh the page to update profile in header
-      window.location.reload();
+      // Redirect to home page
+      setTimeout(() => {
+        navigate('/');
+      }, 500);
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
