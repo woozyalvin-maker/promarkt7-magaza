@@ -28,6 +28,7 @@ const authSchema = z.object({
 const signupSchema = authSchema.extend({
   firstName: z.string().trim().min(1, { message: 'Ad girilmesi zorunludur' }).max(50),
   lastName: z.string().trim().min(1, { message: 'Soyad girilmesi zorunludur' }).max(50),
+  phone: z.string().trim().min(10, { message: 'Telefon numarası en az 10 karakter olmalıdır' }).max(20, { message: 'Telefon numarası en fazla 20 karakter olmalıdır' }),
 });
 
 const Auth = () => {
@@ -38,6 +39,7 @@ const Auth = () => {
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [phone, setPhone] = useState('');
   const [resetEmail, setResetEmail] = useState('');
   const [resetDialogOpen, setResetDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -58,7 +60,7 @@ const Auth = () => {
     e.preventDefault();
     
     try {
-      const validated = signupSchema.parse({ email, password, firstName, lastName });
+      const validated = signupSchema.parse({ email, password, firstName, lastName, phone });
       setIsLoading(true);
 
       const { error } = await supabase.auth.signUp({
@@ -69,6 +71,7 @@ const Auth = () => {
           data: {
             first_name: validated.firstName,
             last_name: validated.lastName,
+            phone: validated.phone,
           }
         }
       });
@@ -397,6 +400,18 @@ const Auth = () => {
                       placeholder="Soyadınız"
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
+                      required
+                      disabled={isLoading}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="signup-phone">Telefon</Label>
+                    <Input
+                      id="signup-phone"
+                      type="tel"
+                      placeholder="05xx xxx xx xx"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       required
                       disabled={isLoading}
                     />
