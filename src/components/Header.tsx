@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Search, ShoppingCart, User, Phone, Menu, X, LogOut } from 'lucide-react';
+import { Search, ShoppingCart, User, Phone, Menu, X, LogOut, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useCart } from '@/contexts/CartContext';
@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
+import { brands } from '@/data/products';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,11 +55,12 @@ const Header = () => {
 
   const navItems = [
     { name: 'Ana Sayfa', path: '/' },
-    { name: 'Markalar', path: '/urunler' },
     { name: 'Blog', path: '/blog' },
     { name: 'Hakkımızda', path: '/hakkimizda' },
     { name: 'İletişim', path: '/iletisim' },
   ];
+
+  const sortedBrands = [...brands].sort((a, b) => a.localeCompare(b, 'tr'));
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -192,6 +194,30 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
+          
+          {/* Markalar Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className={`text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 ${
+                location.pathname === '/urunler' ? 'text-primary' : 'text-foreground'
+              }`}>
+                Markalar
+                <ChevronDown className="h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-56 max-h-[400px] overflow-y-auto bg-background">
+              {sortedBrands.map((brand) => (
+                <DropdownMenuItem key={brand} asChild>
+                  <Link 
+                    to={`/urunler?brand=${encodeURIComponent(brand)}`}
+                    className="cursor-pointer"
+                  >
+                    {brand}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
       </div>
 
@@ -235,6 +261,25 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Markalar Dropdown - Mobile */}
+              <div className="border-t border-border mt-2 pt-2">
+                <div className="py-2 px-4 text-sm font-medium text-muted-foreground">
+                  Markalar
+                </div>
+                <div className="flex flex-col gap-1 max-h-[300px] overflow-y-auto">
+                  {sortedBrands.map((brand) => (
+                    <Link
+                      key={brand}
+                      to={`/urunler?brand=${encodeURIComponent(brand)}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="py-2 px-4 rounded-lg text-sm font-medium transition-colors hover:bg-muted"
+                    >
+                      {brand}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               
               {/* User Menu Items - Mobile */}
               {user && (
