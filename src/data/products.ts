@@ -6,6 +6,7 @@ import creatineImg from '@/assets/product-creatine.jpg';
 import yogaMatImg from '@/assets/product-yoga-mat.jpg';
 import resistanceBandsImg from '@/assets/product-resistance-bands.jpg';
 import bigjoyCaffeineImg from '@/assets/product-bigjoy-caffeine.jpg';
+import bigjoyCreatineGlutamineImg from '@/assets/product-bigjoy-creatine-glutamine.jpg';
 
 export const products: Product[] = [
   {
@@ -329,6 +330,27 @@ export const products: Product[] = [
     ],
     usage: 'Antrenman öncesi 1 kapsül bol suyla alın.',
     isNew: true
+  },
+  {
+    id: '14',
+    name: 'Big2 Creatine + Glutamine',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 1150,
+    image: bigjoyCreatineGlutamineImg,
+    rating: 4.8,
+    reviewCount: 287,
+    inStock: true,
+    description: 'Kreatin ve glutamin kombinasyonu. Güç, performans ve toparlanma için çift etki sağlar.',
+    features: [
+      '5000mg kreatin monohidrat',
+      '5000mg L-glutamin',
+      'Kas kütlesi ve güç artışı',
+      'Hızlı toparlanma',
+      '50 porsiyon'
+    ],
+    usage: 'Antrenman sonrası 1 ölçek (10g) 300ml suya karıştırın.',
+    isBestseller: true
   }
 ];
 
