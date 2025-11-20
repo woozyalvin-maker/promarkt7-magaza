@@ -5,6 +5,7 @@ import multivitaminImg from '@/assets/product-multivitamin.jpg';
 import creatineImg from '@/assets/product-creatine.jpg';
 import yogaMatImg from '@/assets/product-yoga-mat.jpg';
 import resistanceBandsImg from '@/assets/product-resistance-bands.jpg';
+import bigjoyCaffeineImg from '@/assets/product-bigjoy-caffeine.jpg';
 
 export const products: Product[] = [
   {
@@ -47,7 +48,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'BCAA 2:1:1 - 300g',
-    brand: 'Bjoy',
+    brand: 'Bigjoy Sports',
     category: 'Amino Asitler',
     price: 349,
     originalPrice: 499,
@@ -289,7 +290,7 @@ export const products: Product[] = [
   {
     id: '12',
     name: 'D3 Vitamini 5000 IU',
-    brand: 'Bjoy',
+    brand: 'Bigjoy Sports',
     category: 'Vitaminler',
     price: 189,
     originalPrice: 249,
@@ -307,6 +308,27 @@ export const products: Product[] = [
       '4 aylık kullanım'
     ],
     isNew: true
+  },
+  {
+    id: '13',
+    name: 'Caffeine Plus 100 Kapsül',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 450,
+    image: bigjoyCaffeineImg,
+    rating: 4.7,
+    reviewCount: 143,
+    inStock: true,
+    description: 'Kafein ve taurin içeren performans artırıcı kapsüller. Enerji, odaklanma ve dayanıklılık için ideal destek.',
+    features: [
+      '200mg kafein per kapsül',
+      '200mg taurin per kapsül',
+      '100 kapsül',
+      'Enerji ve odaklanma',
+      'Antrenman öncesi ideal'
+    ],
+    usage: 'Antrenman öncesi 1 kapsül bol suyla alın.',
+    isNew: true
   }
 ];
 
@@ -320,14 +342,14 @@ export const categories = [
 ];
 
 export const brands = [
-  'Optimum Nutrition',
-  'Bjoy',
-  'Nutrever',
-  'Nutrend',
+  'Bigjoy Sports',
+  'Bomb Series',
   'Kevin Lovren',
+  'Muscle Pump',
+  'Nutrend',
+  'Nutrever',
+  'Optimum Nutrition',
   'Sat Nutrition',
   'Sygenix',
-  'Muscle Pump',
-  'Bomb Series',
   'Trec Nutrition'
 ];
