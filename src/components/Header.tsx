@@ -183,17 +183,14 @@ const Header = () => {
 
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex items-center justify-center gap-6 mt-4 border-t border-border pt-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive(item.path) ? 'text-primary' : 'text-foreground'
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
+          <Link
+            to="/"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              isActive('/') ? 'text-primary' : 'text-foreground'
+            }`}
+          >
+            Ana Sayfa
+          </Link>
           
           {/* Markalar Dropdown */}
           <DropdownMenu>
@@ -218,6 +215,18 @@ const Header = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {navItems.slice(1).map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive(item.path) ? 'text-primary' : 'text-foreground'
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
       </div>
 
@@ -247,23 +256,20 @@ const Header = () => {
 
             {/* Mobile Navigation */}
             <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'bg-primary text-primary-foreground'
-                      : 'hover:bg-muted'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <Link
+                to="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  isActive('/')
+                    ? 'bg-primary text-primary-foreground'
+                    : 'hover:bg-muted'
+                }`}
+              >
+                Ana Sayfa
+              </Link>
               
               {/* Markalar Dropdown - Mobile */}
-              <div className="border-t border-border mt-2 pt-2">
+              <div className="border-t border-border pt-2">
                 <div className="py-2 px-4 text-sm font-medium text-muted-foreground">
                   Markalar
                 </div>
@@ -280,6 +286,21 @@ const Header = () => {
                   ))}
                 </div>
               </div>
+
+              {navItems.slice(1).map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                    isActive(item.path)
+                      ? 'bg-primary text-primary-foreground'
+                      : 'hover:bg-muted'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
               
               {/* User Menu Items - Mobile */}
               {user && (
