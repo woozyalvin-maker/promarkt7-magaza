@@ -19,13 +19,16 @@ import { Card } from '@/components/ui/card';
 const Products = () => {
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get('kategori');
+  const brandFromUrl = searchParams.get('brand');
   const searchQuery = searchParams.get('search');
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
     categoryFromUrl ? [categoryFromUrl] : []
   );
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>(
+    brandFromUrl ? [brandFromUrl] : []
+  );
   const [priceRange, setPriceRange] = useState([0, 2000]);
   const [sortBy, setSortBy] = useState('recommended');
   const [showFilters, setShowFilters] = useState(true);
@@ -36,6 +39,13 @@ const Products = () => {
       setSelectedCategories([categoryFromUrl]);
     }
   }, [categoryFromUrl]);
+
+  // Update selected brands when URL parameter changes
+  useEffect(() => {
+    if (brandFromUrl) {
+      setSelectedBrands([brandFromUrl]);
+    }
+  }, [brandFromUrl]);
 
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
