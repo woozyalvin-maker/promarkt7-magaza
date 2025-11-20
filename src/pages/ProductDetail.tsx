@@ -69,11 +69,11 @@ const ProductDetail = () => {
         <div>
           <Dialog open={isImageOpen} onOpenChange={setIsImageOpen}>
             <DialogTrigger asChild>
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden mb-4 cursor-zoom-in group relative">
+              <div className="aspect-square bg-muted rounded-lg overflow-hidden mb-4 cursor-zoom-in group relative flex items-center justify-center">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
