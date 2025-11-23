@@ -26,6 +26,7 @@ import nutreverAminoImg from '@/assets/product-nutrever-amino.jpg';
 import nutreverCreatineImg from '@/assets/product-nutrever-creatine.jpg';
 import nutreverProteinBarImg from '@/assets/product-nutrever-protein-bar.jpg';
 import nutrendCreatineCreapureImg from '@/assets/product-nutrend-creatine-creapure.jpg';
+import nutrendMicellarCaseinImg from '@/assets/product-nutrend-micellar-casein.jpg';
 
 export const products: Product[] = [
   {
@@ -733,6 +734,45 @@ export const products: Product[] = [
     ],
     usage: 'Günde 1 ölçek (5g) 250ml su veya meyve suyu ile karıştırarak için.',
     isBestseller: true
+  },
+  {
+    id: '34',
+    name: 'Micellar Casein 900g',
+    brand: 'Nutrend',
+    category: 'Protein Tozları',
+    price: 1800,
+    image: nutrendMicellarCaseinImg,
+    rating: 4.8,
+    reviewCount: 156,
+    inStock: true,
+    description: 'Nutrend Micellar Casein - Yavaş emilen micellar kazein proteini. %92 MPI (Micellar Protein Isolate) içerir. Gece boyunca kas beslenmesi ve toparlanma için ideal. Chocolate + Cocoa aromalı.',
+    features: [
+      '23g protein per porsiyon',
+      '%92 Micellar Casein (MPI)',
+      '5.2g BCAA per porsiyon',
+      'Yavaş salınım formülü (6-8 saat)',
+      'Yüksek doğal kalsiyum içeriği',
+      'Düşük şeker ve yağ',
+      'Yapay renklendirici yok',
+      'Lactowise teknolojisi',
+      '900g - 30 porsiyon'
+    ],
+    nutritionFacts: {
+      servingSize: '30g',
+      servingsPerContainer: 30,
+      calories: 115,
+      protein: 23,
+      carbs: 3,
+      fat: 1
+    },
+    usage: 'Uyumadan önce veya uzun açlık periyotları için 1 ölçek (30g) 250-300ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Chocolate + Cocoa']
+      }
+    ],
+    isNew: true
   }
 ];
 
