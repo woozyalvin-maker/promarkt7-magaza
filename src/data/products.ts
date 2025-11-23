@@ -8,6 +8,7 @@ import resistanceBandsImg from '@/assets/product-resistance-bands.jpg';
 import bigjoyCaffeineImg from '@/assets/product-bigjoy-caffeine.jpg';
 import bigjoyCreatineGlutamineImg from '@/assets/product-bigjoy-creatine-glutamine.jpg';
 import bigjoyBcaaProImg from '@/assets/product-bigjoy-bcaa-pro.jpg';
+import bigjoyHydroPumpImg from '@/assets/product-bigjoy-hydro-pump.jpg';
 
 export const products: Product[] = [
   {
@@ -373,6 +374,27 @@ export const products: Product[] = [
     ],
     usage: 'Antrenman öncesi veya sırasında 1 ölçek (10g) 400ml suya karıştırın.',
     isNew: true
+  },
+  {
+    id: '16',
+    name: 'Hydro Pump 180g',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 650,
+    image: bigjoyHydroPumpImg,
+    rating: 4.8,
+    reviewCount: 198,
+    inStock: true,
+    description: 'Glikogen ve kreatin monohidrat içeren pump formülü. Antrenman sırasında kas hacmi ve dayanıklılık artışı sağlar.',
+    features: [
+      'Glikogen desteği',
+      'Kreatin monohidrat',
+      'Pump etkisi',
+      'Kas hacmi artışı',
+      '20 porsiyon'
+    ],
+    usage: 'Antrenman öncesi 1 ölçek (9g) 250ml suya karıştırın.',
+    isBestseller: true
   }
 ];
 
