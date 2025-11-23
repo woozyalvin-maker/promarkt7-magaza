@@ -380,7 +380,7 @@ export const products: Product[] = [
     name: 'Hydro Pump 180g',
     brand: 'Bigjoy Sports',
     category: 'Amino Asitler',
-    price: 650,
+    price: 490,
     image: bigjoyHydroPumpImg,
     rating: 4.8,
     reviewCount: 198,
