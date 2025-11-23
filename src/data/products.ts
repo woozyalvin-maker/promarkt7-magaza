@@ -19,6 +19,7 @@ import kevinCreatineChewsImg from '@/assets/product-kevin-creatine-chews.jpg';
 import kevinLegendaryMassImg from '@/assets/product-kevin-legendary-mass.jpg';
 import kevinGoldTribulusImg from '@/assets/product-kevin-gold-tribulus.jpg';
 import kevinGoldGlutamineImg from '@/assets/product-kevin-gold-glutamine.jpg';
+import nutreverWheyIsolateImg from '@/assets/product-nutrever-whey-isolate.jpg';
 
 export const products: Product[] = [
   {
@@ -585,6 +586,41 @@ export const products: Product[] = [
     ],
     usage: 'Günde 1-2 porsiyon (5-10g), protein shake veya içeceğinize karıştırarak alın.',
     isNew: true
+  },
+  {
+    id: '27',
+    name: 'Nutrever Whey Isolate Protein 1800g',
+    brand: 'Nutrever',
+    category: 'Protein Tozları',
+    price: 4800,
+    image: nutreverWheyIsolateImg,
+    rating: 4.9,
+    reviewCount: 245,
+    inStock: true,
+    description: 'Alman menşeli Nutrever Whey Isolate Protein. Yüksek kaliteli izole protein, instant WPI formülü. Düşük şeker içerir, çikolata aromalı. 1800g - 60 porsiyon.',
+    features: [
+      '25.2g protein per porsiyon',
+      'Instant WPI formülü',
+      'Düşük şeker içeriği',
+      'Çikolata Dream aroması',
+      'Alman menşeli - 1800g'
+    ],
+    nutritionFacts: {
+      servingSize: '30g',
+      servingsPerContainer: 60,
+      calories: 115,
+      protein: 25.2,
+      carbs: 2,
+      fat: 0.5
+    },
+    usage: 'Antrenman sonrası 1 ölçek (30g) 250ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çikolata Dream']
+      }
+    ],
+    isBestseller: true
   }
 ];
 
