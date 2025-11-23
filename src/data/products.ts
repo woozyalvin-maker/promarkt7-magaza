@@ -162,34 +162,6 @@ export const products: Product[] = [
     ]
   },
   {
-    id: '10',
-    name: 'Pre-Workout Explosion',
-    brand: 'Trec Nutrition',
-    category: 'Amino Asitler',
-    price: 399,
-    originalPrice: 549,
-    discount: 27,
-    image: creatineImg,
-    rating: 4.7,
-    reviewCount: 289,
-    inStock: true,
-    description: 'Antrenman öncesi enerji ve performans artırıcı formül.',
-    features: [
-      'Beta-alanin ve kreatin',
-      'Kafein ve arginin',
-      'Enerji ve odaklanma',
-      'Pump etkisi',
-      '30 porsiyon'
-    ],
-    variants: [
-      {
-        name: 'Aroma',
-        options: ['Meyve Punch', 'Yeşil Elma', 'Portakal']
-      }
-    ],
-    isBestseller: true
-  },
-  {
     id: '11',
     name: 'Protein Bar 12li Paket',
     brand: 'Optimum Nutrition',
