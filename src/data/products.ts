@@ -358,7 +358,7 @@ export const products: Product[] = [
     name: 'BCAA Pro Karpuz 400g',
     brand: 'Bigjoy Sports',
     category: 'Amino Asitler',
-    price: 450,
+    price: 800,
     image: bigjoyBcaaProImg,
     rating: 4.7,
     reviewCount: 156,
