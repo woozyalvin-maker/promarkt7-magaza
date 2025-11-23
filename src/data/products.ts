@@ -29,6 +29,7 @@ import nutrendCreatineCreapureImg from '@/assets/product-nutrend-creatine-creapu
 import nutrendMicellarCaseinImg from '@/assets/product-nutrend-micellar-casein.jpg';
 import nutrendCarnitine3000Img from '@/assets/product-nutrend-carnitine-3000.jpg';
 import faIceBcaaImg from '@/assets/product-fa-ice-bcaa.jpg';
+import faIcePumpImg from '@/assets/product-fa-ice-pump.jpg';
 
 export const products: Product[] = [
   {
@@ -828,6 +829,37 @@ export const products: Product[] = [
       'Antrenman sırasında ideal'
     ],
     usage: 'Antrenman sırasında veya öncesinde 1 porsiyon (10g) 300ml suya karıştırarak tüketin.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Icy Citrus & Peach']
+      }
+    ],
+    isNew: true
+  },
+  {
+    id: '37',
+    name: 'Ice Pump Pre Workout 463g',
+    brand: 'FA Nutrition',
+    category: 'Pre-Workout',
+    price: 1790,
+    image: faIcePumpImg,
+    rating: 4.9,
+    reviewCount: 247,
+    inStock: true,
+    description: 'FA Nutrition Ice Pump - Evercool Ice Effect teknolojili pre-workout formülü. 6000mg Citrulline Malate, 3200mg Beta Alanine, 2000mg L-Arginine, 1500mg Betaine Anhydrous ve 1500mg Glycerol Monostearate içerir. Icy Citrus & Peach aromalı.',
+    features: [
+      '6000mg Citrulline Malate',
+      '3200mg Beta Alanine',
+      '2000mg L-Arginine AKG',
+      '1500mg Betaine Anhydrous',
+      '1500mg Glycerol Monostearate',
+      'Evercool Ice Effect teknolojisi',
+      'Icy Citrus & Peach aroması',
+      '463g net ağırlık',
+      'Maksimum pompa ve performans'
+    ],
+    usage: 'Antrenman öncesi 30 dakika önce 1 porsiyon (15g) 250-300ml suya karıştırarak tüketin.',
     variants: [
       {
         name: 'Aroma',
