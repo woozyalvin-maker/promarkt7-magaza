@@ -51,29 +51,6 @@ export const products: Product[] = [
     isBestseller: true
   },
   {
-    id: '2',
-    name: 'BCAA 2:1:1 - 300g',
-    brand: 'Bigjoy Sports',
-    category: 'Amino Asitler',
-    price: 349,
-    originalPrice: 499,
-    discount: 30,
-    image: bcaaImg,
-    rating: 4.6,
-    reviewCount: 198,
-    inStock: true,
-    description: 'Dallanmış zincirli amino asitler. Antrenman sırasında kas yıkımını önler ve toparlanmayı hızlandırır.',
-    features: [
-      '5g BCAA per porsiyon',
-      '2:1:1 oranı (Leucine:Isoleucine:Valine)',
-      'Antrenman sırasında kullanım',
-      'Tat ve aromasız',
-      'Kolay çözünür'
-    ],
-    usage: 'Antrenman öncesi veya sırasında 1 ölçek (5g) 400ml suya karıştırın.',
-    isBestseller: true
-  },
-  {
     id: '3',
     name: 'Multivitamin 60 Tablet',
     brand: 'Nutrever',
@@ -291,28 +268,6 @@ export const products: Product[] = [
         options: ['Çikolata', 'Fıstık Ezmesi', 'Kurabiye']
       }
     ]
-  },
-  {
-    id: '12',
-    name: 'D3 Vitamini 5000 IU',
-    brand: 'Bigjoy Sports',
-    category: 'Vitaminler',
-    price: 189,
-    originalPrice: 249,
-    discount: 24,
-    image: multivitaminImg,
-    rating: 4.9,
-    reviewCount: 512,
-    inStock: true,
-    description: 'Yüksek doz D3 vitamini. Kemik ve bağışıklık sistemi sağlığı.',
-    features: [
-      '5000 IU vitamin D3',
-      'Softgel kapsül',
-      'Kolay yutulur',
-      '120 kapsül',
-      '4 aylık kullanım'
-    ],
-    isNew: true
   },
   {
     id: '13',
