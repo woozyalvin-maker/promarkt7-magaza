@@ -22,6 +22,7 @@ import kevinGoldGlutamineImg from '@/assets/product-kevin-gold-glutamine.jpg';
 import nutreverWheyIsolateImg from '@/assets/product-nutrever-whey-isolate.jpg';
 import nutreverCarnitineImg from '@/assets/product-nutrever-carnitine.jpg';
 import nutreverBcaaImg from '@/assets/product-nutrever-bcaa.jpg';
+import nutreverAminoImg from '@/assets/product-nutrever-amino.jpg';
 
 export const products: Product[] = [
   {
@@ -653,6 +654,27 @@ export const products: Product[] = [
         options: ['Ice Tea Peach']
       }
     ],
+    isNew: true
+  },
+  {
+    id: '30',
+    name: 'Whey Amino Xtreme Formula 300 Tablet',
+    brand: 'Nutrever',
+    category: 'Amino Asitler',
+    price: 1500,
+    image: nutreverAminoImg,
+    rating: 4.9,
+    reviewCount: 167,
+    inStock: true,
+    description: 'Alman menşeli Nutrever Whey Amino Xtreme Formula. 300 tablet amino asit kompleksi, B6 vitamini ve kalsiyum içerir. Kas yapımı ve toparlanma için ideal amino asit desteği.',
+    features: [
+      'Whey amino asit kompleksi',
+      '300 tablet - uzun süreli kullanım',
+      'B6 vitamini ile zenginleştirilmiş',
+      'Kalsiyum içerir',
+      'Xtreme Formula - yüksek konsantrasyon'
+    ],
+    usage: 'Günde 3-6 tablet, antrenman öncesi ve sonrası alın.',
     isNew: true
   }
 ];
