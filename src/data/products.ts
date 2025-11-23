@@ -7,6 +7,7 @@ import yogaMatImg from '@/assets/product-yoga-mat.jpg';
 import resistanceBandsImg from '@/assets/product-resistance-bands.jpg';
 import bigjoyCaffeineImg from '@/assets/product-bigjoy-caffeine.jpg';
 import bigjoyCreatineGlutamineImg from '@/assets/product-bigjoy-creatine-glutamine.jpg';
+import bigjoyBcaaProImg from '@/assets/product-bigjoy-bcaa-pro.jpg';
 
 export const products: Product[] = [
   {
@@ -351,6 +352,27 @@ export const products: Product[] = [
     ],
     usage: 'Antrenman sonrası 1 ölçek (10g) 300ml suya karıştırın.',
     isBestseller: true
+  },
+  {
+    id: '15',
+    name: 'BCAA Pro Karpuz 400g',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 450,
+    image: bigjoyBcaaProImg,
+    rating: 4.7,
+    reviewCount: 156,
+    inStock: true,
+    description: '4:1:1 oranında BCAA içeren profesyonel formül. Karpuz aromalı, antrenman sırasında kas koruması sağlar.',
+    features: [
+      '6000mg BCAA per porsiyon',
+      '4:1:1 oranı (Leucine:Isoleucine:Valine)',
+      'Karpuz aroması',
+      '40 porsiyon',
+      'Antrenman içi kullanım'
+    ],
+    usage: 'Antrenman öncesi veya sırasında 1 ölçek (10g) 400ml suya karıştırın.',
+    isNew: true
   }
 ];
 
