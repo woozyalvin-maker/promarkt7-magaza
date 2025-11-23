@@ -27,6 +27,7 @@ import nutreverCreatineImg from '@/assets/product-nutrever-creatine.jpg';
 import nutreverProteinBarImg from '@/assets/product-nutrever-protein-bar.jpg';
 import nutrendCreatineCreapureImg from '@/assets/product-nutrend-creatine-creapure.jpg';
 import nutrendMicellarCaseinImg from '@/assets/product-nutrend-micellar-casein.jpg';
+import nutrendCarnitine3000Img from '@/assets/product-nutrend-carnitine-3000.jpg';
 
 export const products: Product[] = [
   {
@@ -770,6 +771,36 @@ export const products: Product[] = [
       {
         name: 'Aroma',
         options: ['Chocolate + Cocoa']
+      }
+    ],
+    isNew: true
+  },
+  {
+    id: '35',
+    name: 'L-Carnitine 3000 Shot 20 Ampül',
+    brand: 'Nutrend',
+    category: 'Amino Asitler',
+    price: 1400,
+    image: nutrendCarnitine3000Img,
+    rating: 4.8,
+    reviewCount: 203,
+    inStock: true,
+    description: 'Nutrend L-Carnitine 3000 Shot - 20 ampül x 60ml portakal aromalı. Yağ yakımı ve enerji metabolizması için yüksek konsantrasyonlu L-Carnitine formülü. Krompikolinat ve 10 vitamin içerir.',
+    features: [
+      '3000mg L-Carnitine per ampül',
+      '20 ampül x 60ml',
+      'Portakal aroması',
+      'Krompikolinat içerir',
+      '10 vitamin ile zenginleştirilmiş',
+      'Şekersiz formül',
+      'Likit form - hızlı emilim',
+      'Antrenman öncesi ideal'
+    ],
+    usage: 'Günde 1 ampül (60ml), tercihen antrenman öncesi 30 dakika önce veya sabah aç karnına tüketin.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Portakal']
       }
     ],
     isNew: true
