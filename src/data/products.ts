@@ -25,6 +25,7 @@ import nutreverBcaaImg from '@/assets/product-nutrever-bcaa.jpg';
 import nutreverAminoImg from '@/assets/product-nutrever-amino.jpg';
 import nutreverCreatineImg from '@/assets/product-nutrever-creatine.jpg';
 import nutreverProteinBarImg from '@/assets/product-nutrever-protein-bar.jpg';
+import nutrendCreatineCreapureImg from '@/assets/product-nutrend-creatine-creapure.jpg';
 
 export const products: Product[] = [
   {
@@ -733,6 +734,27 @@ export const products: Product[] = [
         options: ['Toffee Chocolate']
       }
     ],
+    isBestseller: true
+  },
+  {
+    id: '33',
+    name: 'Creatine Monohydrate Creapure 300g',
+    brand: 'Nutrend',
+    category: 'Amino Asitler',
+    price: 1250,
+    image: nutrendCreatineCreapureImg,
+    rating: 4.9,
+    reviewCount: 178,
+    inStock: true,
+    description: 'Nutrend Creatine Monohydrate Creapure. Premium kalite Creapure® sertifikalı kreatin monohidrat. Kas gücü ve performans artışı için mikronize formül.',
+    features: [
+      'Creapure® kalitesi - Alman sertifikalı',
+      '5g saf kreatin monohidrat per porsiyon',
+      'Mikronize formül - kolay emilim',
+      '300g - 60 porsiyon',
+      'Aromasız - her içeceğe karıştırılabilir'
+    ],
+    usage: 'Günde 1 ölçek (5g) 250ml su veya meyve suyu ile karıştırarak için.',
     isBestseller: true
   }
 ];
