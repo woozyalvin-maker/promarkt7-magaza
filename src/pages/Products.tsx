@@ -16,6 +16,8 @@ import {
 } from '@/components/ui/select';
 import { Card } from '@/components/ui/card';
 
+const MAX_PRICE = Math.max(...products.map((p) => p.price));
+
 const Products = () => {
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get('kategori');
@@ -29,7 +31,7 @@ const Products = () => {
   const [selectedBrands, setSelectedBrands] = useState<string[]>(
     brandFromUrl ? [brandFromUrl] : []
   );
-  const [priceRange, setPriceRange] = useState([0, 2000]);
+  const [priceRange, setPriceRange] = useState<number[]>([0, MAX_PRICE]);
   const [sortBy, setSortBy] = useState('recommended');
   const [showFilters, setShowFilters] = useState(true);
 
@@ -192,7 +194,7 @@ const Products = () => {
               <Slider
                 value={priceRange}
                 onValueChange={setPriceRange}
-                max={2000}
+                max={MAX_PRICE}
                 step={50}
                 className="mb-3"
               />
