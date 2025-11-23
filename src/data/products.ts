@@ -30,6 +30,7 @@ import nutrendMicellarCaseinImg from '@/assets/product-nutrend-micellar-casein.j
 import nutrendCarnitine3000Img from '@/assets/product-nutrend-carnitine-3000.jpg';
 import faIceBcaaImg from '@/assets/product-fa-ice-bcaa.jpg';
 import faIcePumpImg from '@/assets/product-fa-ice-pump.jpg';
+import trecClenburexinImg from '@/assets/product-trec-clenburexin.jpg';
 
 export const products: Product[] = [
   {
@@ -866,6 +867,30 @@ export const products: Product[] = [
         options: ['Icy Citrus & Peach']
       }
     ],
+    isNew: true
+  },
+  {
+    id: '38',
+    name: 'Clenburexin 90 Caps',
+    brand: 'Trec Nutrition',
+    category: 'Yağ Yakıcılar',
+    price: 1250,
+    image: trecClenburexinImg,
+    rating: 4.7,
+    reviewCount: 156,
+    inStock: true,
+    description: 'Trec Nutrition Clenburexin - Gelişmiş termojenik yağ yakıcı formül. 148mg EGCG içeren 9 aktif bileşenle güçlendirilmiş cutting stack. 90 kapsül.',
+    features: [
+      '148mg EGCG (yeşil çay özü)',
+      '9 aktif bileşen içerir',
+      'Gelişmiş termojenik formül',
+      'Cutting desteği',
+      '90 kapsül',
+      'Kolay kullanım',
+      'Hızlı emilim',
+      'Yağ yakımı ve metabolizma desteği'
+    ],
+    usage: 'Günde 3 kapsül, tercihen öğünlerden önce bol su ile alınız.',
     isNew: true
   }
 ];
