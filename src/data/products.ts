@@ -31,6 +31,7 @@ import nutrendCarnitine3000Img from '@/assets/product-nutrend-carnitine-3000.jpg
 import faIceBcaaImg from '@/assets/product-fa-ice-bcaa.jpg';
 import faIcePumpImg from '@/assets/product-fa-ice-pump.jpg';
 import trecClenburexinImg from '@/assets/product-trec-clenburexin.jpg';
+import trecCreatineImg from '@/assets/product-trec-creatine.jpg';
 
 export const products: Product[] = [
   {
@@ -863,6 +864,30 @@ export const products: Product[] = [
       'Yağ yakımı ve metabolizma desteği'
     ],
     usage: 'Günde 3 kapsül, tercihen öğünlerden önce bol su ile alınız.',
+    isNew: true
+  },
+  {
+    id: '39',
+    name: 'Creatine 100% 300g',
+    brand: 'Trec Nutrition',
+    category: 'Kreatin',
+    price: 1450,
+    image: trecCreatineImg,
+    rating: 4.8,
+    reviewCount: 198,
+    inStock: true,
+    description: 'Trec Nutrition Creatine 100% - Saf mikronize kreatin monohidrat formülü. 300 gram paket, yüksek saflık ve kalite. Kas gücü ve performans artışı için ideal.',
+    features: [
+      '100% saf kreatin monohidrat',
+      'Mikronize formül',
+      'Hızlı emilim',
+      '300g net ağırlık',
+      'Yüksek saflık',
+      'Kas gücü artışı',
+      'Performans desteği',
+      '60 porsiyon'
+    ],
+    usage: 'Günde 5g (1 ölçek) bol su, meyve suyu veya protein shake ile karıştırarak tüketin.',
     isNew: true
   }
 ];
