@@ -13,6 +13,7 @@ import bigjoyBcaaRippedImg from '@/assets/product-bigjoy-bcaa-ripped.jpg';
 import bigjoyCreaBigChewImg from '@/assets/product-bigjoy-creabig-chew.jpg';
 import olimpBcaaXplodeImg from '@/assets/product-olimp-bcaa-xplode.jpg';
 import olimpWheyComplexImg from '@/assets/product-olimp-whey-complex.jpg';
+import olimpWheyComplexChocoImg from '@/assets/product-olimp-whey-complex-choco.jpg';
 
 export const products: Product[] = [
   {
@@ -449,6 +450,41 @@ export const products: Product[] = [
       {
         name: 'Aroma',
         options: ['Çilek', 'Çikolata', 'Vanilya']
+      }
+    ],
+    isBestseller: true
+  },
+  {
+    id: '21',
+    name: 'Whey Protein Complex 1800g - Çikolata',
+    brand: 'Olimp',
+    category: 'Protein Tozları',
+    price: 4800,
+    image: olimpWheyComplexChocoImg,
+    rating: 4.9,
+    reviewCount: 432,
+    inStock: true,
+    description: 'Double Chocolate flavour whey protein kompleksi. WPC ve WPI içeren yüksek proteinli formül.',
+    features: [
+      '25g protein per porsiyon',
+      'WPC & WPI kombinasyonu',
+      'Yüksek kakao oranı',
+      'Çikolata aroması',
+      '48 porsiyon - 1800g'
+    ],
+    nutritionFacts: {
+      servingSize: '37g',
+      servingsPerContainer: 48,
+      calories: 140,
+      protein: 25,
+      carbs: 4,
+      fat: 3
+    },
+    usage: 'Antrenman sonrası 1 ölçek (37g) 200-250ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çikolata']
       }
     ],
     isBestseller: true
