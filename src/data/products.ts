@@ -16,6 +16,7 @@ import olimpWheyComplexImg from '@/assets/product-olimp-whey-complex.jpg';
 import olimpWheyComplexChocoImg from '@/assets/product-olimp-whey-complex-choco.jpg';
 import kevinGoldCreatineImg from '@/assets/product-kevin-gold-creatine.jpg';
 import kevinCreatineChewsImg from '@/assets/product-kevin-creatine-chews.jpg';
+import kevinLegendaryMassImg from '@/assets/product-kevin-legendary-mass.jpg';
 
 export const products: Product[] = [
   {
@@ -505,6 +506,41 @@ export const products: Product[] = [
     ],
     usage: 'Günde 4 tablet çiğneyerek alın.',
     isNew: true
+  },
+  {
+    id: '24',
+    name: 'Kevin Levrone Legendary Mass 3000g',
+    brand: 'Kevin Lovren',
+    category: 'Protein Tozları',
+    price: 2800,
+    image: kevinLegendaryMassImg,
+    rating: 4.9,
+    reviewCount: 156,
+    inStock: true,
+    description: 'Kevin Levrone Signature Series profesyonel kilo alma formülü. Multi-protein kompleks içeren legendary gainer. Kas kütlesi artışı için ideal.',
+    features: [
+      '80g protein per porsiyon',
+      '272g karbonhidrat per porsiyon',
+      '5 farklı protein kaynağı',
+      'Çikolata aroması',
+      '30 porsiyon - 3000g'
+    ],
+    nutritionFacts: {
+      servingSize: '100g',
+      servingsPerContainer: 30,
+      calories: 380,
+      protein: 80,
+      carbs: 272,
+      fat: 5
+    },
+    usage: 'Öğünler arası veya antrenman sonrası 1 ölçek (100g) 400-500ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çikolata']
+      }
+    ],
+    isBestseller: true
   }
 ];
 
