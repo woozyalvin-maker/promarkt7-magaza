@@ -15,6 +15,7 @@ import olimpBcaaXplodeImg from '@/assets/product-olimp-bcaa-xplode.jpg';
 import olimpWheyComplexImg from '@/assets/product-olimp-whey-complex.jpg';
 import olimpWheyComplexChocoImg from '@/assets/product-olimp-whey-complex-choco.jpg';
 import kevinGoldCreatineImg from '@/assets/product-kevin-gold-creatine.jpg';
+import kevinCreatineChewsImg from '@/assets/product-kevin-creatine-chews.jpg';
 
 export const products: Product[] = [
   {
@@ -482,6 +483,27 @@ export const products: Product[] = [
       'Gold Line serisi'
     ],
     usage: 'Günde 1 ölçek (5g) bol suyla karıştırarak için.',
+    isNew: true
+  },
+  {
+    id: '23',
+    name: 'Kevin Levrone Gold Creatine Chews Blue Raspberry 120 Tabs',
+    brand: 'Kevin Lovren',
+    category: 'Amino Asitler',
+    price: 1340,
+    image: kevinCreatineChewsImg,
+    rating: 4.7,
+    reviewCount: 72,
+    inStock: true,
+    description: 'Kevin Levrone Gold Line çiğnenebilir kreatin tablet. Blue Raspberry aromalı, pratik kullanım için ideal. Su ile karıştırmaya gerek yok.',
+    features: [
+      '5g kreatin per porsiyon',
+      'Çiğnenebilir tablet formu',
+      'Blue Raspberry aroması',
+      '120 tablet',
+      'Pratik kullanım - su gerektirmez'
+    ],
+    usage: 'Günde 4 tablet çiğneyerek alın.',
     isNew: true
   }
 ];
