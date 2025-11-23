@@ -28,6 +28,7 @@ import nutreverProteinBarImg from '@/assets/product-nutrever-protein-bar.jpg';
 import nutrendCreatineCreapureImg from '@/assets/product-nutrend-creatine-creapure.jpg';
 import nutrendMicellarCaseinImg from '@/assets/product-nutrend-micellar-casein.jpg';
 import nutrendCarnitine3000Img from '@/assets/product-nutrend-carnitine-3000.jpg';
+import faIceBcaaImg from '@/assets/product-fa-ice-bcaa.jpg';
 
 export const products: Product[] = [
   {
@@ -804,6 +805,36 @@ export const products: Product[] = [
       }
     ],
     isNew: true
+  },
+  {
+    id: '36',
+    name: 'ICE BCAA 375g',
+    brand: 'FA Nutrition',
+    category: 'Amino Asitler',
+    price: 1250,
+    image: faIceBcaaImg,
+    rating: 4.7,
+    reviewCount: 189,
+    inStock: true,
+    description: 'FA Nutrition ICE BCAA - Evercool Ice Effect teknolojisi ile serinletici etkili BCAA formülü. 7000mg BCAA, 2000mg L-Glutamine ve 1000mg Citrulline Malate içerir. Icy Citrus & Peach aroması.',
+    features: [
+      '7000mg BCAA per porsiyon',
+      '2000mg L-Glutamine',
+      '1000mg Citrulline Malate',
+      'Evercool Ice Effect teknolojisi',
+      'Serinletici etki',
+      'Icy Citrus & Peach aroması',
+      '375g net ağırlık',
+      'Antrenman sırasında ideal'
+    ],
+    usage: 'Antrenman sırasında veya öncesinde 1 porsiyon (10g) 300ml suya karıştırarak tüketin.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Icy Citrus & Peach']
+      }
+    ],
+    isNew: true
   }
 ];
 
@@ -819,6 +850,7 @@ export const categories = [
 export const brands = [
   'Bigjoy Sports',
   'Bomb Series',
+  'FA Nutrition',
   'Kevin Lovren',
   'Muscle Pump',
   'Nutrend',
