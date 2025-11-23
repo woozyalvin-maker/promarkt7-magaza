@@ -9,6 +9,7 @@ import bigjoyCaffeineImg from '@/assets/product-bigjoy-caffeine.jpg';
 import bigjoyCreatineGlutamineImg from '@/assets/product-bigjoy-creatine-glutamine.jpg';
 import bigjoyBcaaProImg from '@/assets/product-bigjoy-bcaa-pro.jpg';
 import bigjoyHydroPumpImg from '@/assets/product-bigjoy-hydro-pump.jpg';
+import bigjoyBcaaRippedImg from '@/assets/product-bigjoy-bcaa-ripped.jpg';
 
 export const products: Product[] = [
   {
@@ -394,6 +395,27 @@ export const products: Product[] = [
       '20 porsiyon'
     ],
     usage: 'Antrenman öncesi 1 ölçek (9g) 250ml suya karıştırın.',
+    isBestseller: true
+  },
+  {
+    id: '17',
+    name: 'BCAA Pro 4:1:1 Ripped 864g',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 1500,
+    image: bigjoyBcaaRippedImg,
+    rating: 4.9,
+    reviewCount: 234,
+    inStock: true,
+    description: 'Pre/Intra workout RIPPED formülü. 4:1:1 BCAA ile L-Carnitine, taurin, kafein ve CLA içerir. Enerji ve yağ yakım desteği sağlar.',
+    features: [
+      '6000mg BCAA 4:1:1 oranı',
+      'L-Carnitine ve CLA',
+      'Kafein ve taurin',
+      'Ananas aroması',
+      '72 porsiyon - 864g'
+    ],
+    usage: 'Antrenman öncesi veya sırasında 1 ölçek (12g) 400ml suya karıştırın.',
     isBestseller: true
   }
 ];
