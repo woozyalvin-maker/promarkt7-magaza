@@ -101,33 +101,6 @@ export const products: Product[] = [
     isBestseller: true
   },
   {
-    id: '5',
-    name: 'Yoga Matı Premium',
-    brand: 'Kevin Lovren',
-    category: 'Spor Ekipmanları',
-    price: 249,
-    originalPrice: 349,
-    discount: 29,
-    image: yogaMatImg,
-    rating: 4.5,
-    reviewCount: 123,
-    inStock: true,
-    description: 'Kaymaz, yüksek yoğunluklu yoga ve pilates matı. Konforlu ve dayanıklı.',
-    features: [
-      '10mm kalınlık',
-      'Kaymaz yüzey',
-      'Taşıma askısı hediye',
-      '180cm x 60cm',
-      'Kolay temizlenir'
-    ],
-    variants: [
-      {
-        name: 'Renk',
-        options: ['Siyah/Turuncu', 'Mor', 'Mavi', 'Yeşil']
-      }
-    ]
-  },
-  {
     id: '6',
     name: 'Direnç Bandı Seti',
     brand: 'Sat Nutrition',
