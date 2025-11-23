@@ -17,6 +17,7 @@ import olimpWheyComplexChocoImg from '@/assets/product-olimp-whey-complex-choco.
 import kevinGoldCreatineImg from '@/assets/product-kevin-gold-creatine.jpg';
 import kevinCreatineChewsImg from '@/assets/product-kevin-creatine-chews.jpg';
 import kevinLegendaryMassImg from '@/assets/product-kevin-legendary-mass.jpg';
+import kevinGoldTribulusImg from '@/assets/product-kevin-gold-tribulus.jpg';
 
 export const products: Product[] = [
   {
@@ -541,6 +542,27 @@ export const products: Product[] = [
       }
     ],
     isBestseller: true
+  },
+  {
+    id: '25',
+    name: 'Kevin Levrone Gold Tribulus 90 Tablet',
+    brand: 'Kevin Lovren',
+    category: 'Vitaminler',
+    price: 1340,
+    image: kevinGoldTribulusImg,
+    rating: 4.8,
+    reviewCount: 89,
+    inStock: true,
+    description: 'Kevin Levrone Gold Tribulus, doğal testosteron seviyelerini desteklemek için formüle edilmiş güçlü bir takviye. Her tablette 200mg tribulus terrestris ekstraktı içerir.',
+    features: [
+      '200mg Tribulus Terrestris per tablet',
+      '90 tablet - 3 aylık kullanım',
+      'Doğal testosteron desteği',
+      'Saponin içeriği yüksek',
+      'Gold Line kalitesi'
+    ],
+    usage: 'Günde 3 tablet, yemeklerle birlikte alın.',
+    isNew: true
   }
 ];
 
