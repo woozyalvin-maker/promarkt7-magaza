@@ -18,6 +18,7 @@ import kevinGoldCreatineImg from '@/assets/product-kevin-gold-creatine.jpg';
 import kevinCreatineChewsImg from '@/assets/product-kevin-creatine-chews.jpg';
 import kevinLegendaryMassImg from '@/assets/product-kevin-legendary-mass.jpg';
 import kevinGoldTribulusImg from '@/assets/product-kevin-gold-tribulus.jpg';
+import kevinGoldGlutamineImg from '@/assets/product-kevin-gold-glutamine.jpg';
 
 export const products: Product[] = [
   {
@@ -562,6 +563,27 @@ export const products: Product[] = [
       'Gold Line kalitesi'
     ],
     usage: 'Günde 3 tablet, yemeklerle birlikte alın.',
+    isNew: true
+  },
+  {
+    id: '26',
+    name: 'Kevin Levrone Gold Glutamine 300g',
+    brand: 'Kevin Lovren',
+    category: 'Amino Asitler',
+    price: 1520,
+    image: kevinGoldGlutamineImg,
+    rating: 4.9,
+    reviewCount: 103,
+    inStock: true,
+    description: 'Kevin Levrone Signature Series Gold Line glutamin tozu. Aromasız, saf L-Glutamin. Kas toparlanması ve glikojen metabolizması için ideal. Protein metabolizmasını destekler.',
+    features: [
+      '5g saf L-Glutamin per porsiyon',
+      'Aromasız - kolay karıştırma',
+      '300g - 60 porsiyon',
+      'Glikojen metabolizmasını destekler',
+      'Protein metabolizması için ideal'
+    ],
+    usage: 'Günde 1-2 porsiyon (5-10g), protein shake veya içeceğinize karıştırarak alın.',
     isNew: true
   }
 ];
