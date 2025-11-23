@@ -12,6 +12,7 @@ import bigjoyHydroPumpImg from '@/assets/product-bigjoy-hydro-pump.jpg';
 import bigjoyBcaaRippedImg from '@/assets/product-bigjoy-bcaa-ripped.jpg';
 import bigjoyCreaBigChewImg from '@/assets/product-bigjoy-creabig-chew.jpg';
 import olimpBcaaXplodeImg from '@/assets/product-olimp-bcaa-xplode.jpg';
+import olimpWheyComplexImg from '@/assets/product-olimp-whey-complex.jpg';
 
 export const products: Product[] = [
   {
@@ -415,6 +416,41 @@ export const products: Product[] = [
       '500g - 40 porsiyon'
     ],
     usage: 'Antrenman öncesi veya sırasında 1 ölçek (12.5g) 200ml suya karıştırın.',
+    isBestseller: true
+  },
+  {
+    id: '20',
+    name: 'Whey Protein Complex 1800g - Çilek',
+    brand: 'Olimp',
+    category: 'Protein Tozları',
+    price: 4800,
+    image: olimpWheyComplexImg,
+    rating: 4.9,
+    reviewCount: 456,
+    inStock: true,
+    description: 'Ultimate Whey Protein Formula. Mikro-filtrasyon yöntemiyle üretilmiş whey protein. WPC ve WPI içeren kompleks formül.',
+    features: [
+      '25g protein per porsiyon',
+      'WPC & WPI kombinasyonu',
+      '5g BCAA per porsiyon',
+      'Çilek aroması',
+      '51 porsiyon - 1800g'
+    ],
+    nutritionFacts: {
+      servingSize: '35g',
+      servingsPerContainer: 51,
+      calories: 135,
+      protein: 25,
+      carbs: 3,
+      fat: 2
+    },
+    usage: 'Antrenman sonrası 1 ölçek (35g) 200-250ml su veya süt ile karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Çilek', 'Çikolata', 'Vanilya']
+      }
+    ],
     isBestseller: true
   }
 ];
