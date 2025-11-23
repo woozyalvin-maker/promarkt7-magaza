@@ -11,6 +11,7 @@ import bigjoyBcaaProImg from '@/assets/product-bigjoy-bcaa-pro.jpg';
 import bigjoyHydroPumpImg from '@/assets/product-bigjoy-hydro-pump.jpg';
 import bigjoyBcaaRippedImg from '@/assets/product-bigjoy-bcaa-ripped.jpg';
 import bigjoyCreaBigChewImg from '@/assets/product-bigjoy-creabig-chew.jpg';
+import olimpBcaaXplodeImg from '@/assets/product-olimp-bcaa-xplode.jpg';
 
 export const products: Product[] = [
   {
@@ -394,6 +395,27 @@ export const products: Product[] = [
     ],
     usage: 'Günde 4 tablet çiğneyerek alın.',
     isNew: true
+  },
+  {
+    id: '19',
+    name: 'BCAA Xplode 500G - Ananas',
+    brand: 'Olimp',
+    category: 'Amino Asitler',
+    price: 1950,
+    image: olimpBcaaXplodeImg,
+    rating: 4.8,
+    reviewCount: 312,
+    inStock: true,
+    description: 'BCAA Xplode Powder. Amino asitler ve anti-yorgunluk formülü (Vitamin B6). 2:1:1 oranında BCAA içerir.',
+    features: [
+      '6000mg BCAA 2:1:1 oranı',
+      'Vitamin B6 içerir',
+      'Anti-yorgunluk formülü',
+      'Ananas aroması',
+      '500g - 40 porsiyon'
+    ],
+    usage: 'Antrenman öncesi veya sırasında 1 ölçek (12.5g) 200ml suya karıştırın.',
+    isBestseller: true
   }
 ];
 
@@ -413,6 +435,7 @@ export const brands = [
   'Muscle Pump',
   'Nutrend',
   'Nutrever',
+  'Olimp',
   'Optimum Nutrition',
   'Sat Nutrition',
   'Sygenix',
