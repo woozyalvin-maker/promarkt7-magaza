@@ -66,29 +66,6 @@ export const products: Product[] = [
     isBestseller: true
   },
   {
-    id: '4',
-    name: 'Kreatin Monohidrat 500g',
-    brand: 'Nutrend',
-    category: 'Amino Asitler',
-    price: 299,
-    originalPrice: 399,
-    discount: 25,
-    image: creatineImg,
-    rating: 4.9,
-    reviewCount: 567,
-    inStock: true,
-    description: 'Saf kreatin monohidrat. Güç ve performans artışı için bilimsel olarak kanıtlanmış destek.',
-    features: [
-      '5g saf kreatin per porsiyon',
-      'Creapure® kalitesi',
-      'Aromasız',
-      'Güç ve dayanıklılık artışı',
-      '100 porsiyon'
-    ],
-    usage: 'Günde 5g, bol suyla karıştırarak için.',
-    isBestseller: true
-  },
-  {
     id: '6',
     name: 'Direnç Bandı Seti',
     brand: 'Sat Nutrition',
