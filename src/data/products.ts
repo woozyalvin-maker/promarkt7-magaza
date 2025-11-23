@@ -20,6 +20,7 @@ import kevinLegendaryMassImg from '@/assets/product-kevin-legendary-mass.jpg';
 import kevinGoldTribulusImg from '@/assets/product-kevin-gold-tribulus.jpg';
 import kevinGoldGlutamineImg from '@/assets/product-kevin-gold-glutamine.jpg';
 import nutreverWheyIsolateImg from '@/assets/product-nutrever-whey-isolate.jpg';
+import nutreverCarnitineImg from '@/assets/product-nutrever-carnitine.jpg';
 
 export const products: Product[] = [
   {
@@ -598,6 +599,33 @@ export const products: Product[] = [
       }
     ],
     isBestseller: true
+  },
+  {
+    id: '28',
+    name: 'L-Carnitine 3000 Liquid 20 Ampül',
+    brand: 'Nutrever',
+    category: 'Amino Asitler',
+    price: 1300,
+    image: nutreverCarnitineImg,
+    rating: 4.8,
+    reviewCount: 178,
+    inStock: true,
+    description: 'Alman menşeli Nutrever L-Carnitine 3000 Liquid. 20 ampül 60ml, yağ yakımı ve enerji üretimi için likit L-Carnitine formülü. Şekersiz, kromat, vitamin ve yeşil çay ekstraktı içerir.',
+    features: [
+      '3000mg L-Carnitine per ampül',
+      'Likit form - hızlı emilim',
+      '20 ampül x 60ml',
+      'Şekersiz formül',
+      'Kromat, vitamin ve yeşil çay ekstraktı'
+    ],
+    usage: 'Günde 1 ampül, tercihen antrenman öncesi veya sabah aç karnına için.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Peach (Şeftali)']
+      }
+    ],
+    isNew: true
   }
 ];
 
