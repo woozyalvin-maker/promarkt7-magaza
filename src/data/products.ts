@@ -24,6 +24,7 @@ import nutreverCarnitineImg from '@/assets/product-nutrever-carnitine.jpg';
 import nutreverBcaaImg from '@/assets/product-nutrever-bcaa.jpg';
 import nutreverAminoImg from '@/assets/product-nutrever-amino.jpg';
 import nutreverCreatineImg from '@/assets/product-nutrever-creatine.jpg';
+import nutreverProteinBarImg from '@/assets/product-nutrever-protein-bar.jpg';
 
 export const products: Product[] = [
   {
@@ -697,6 +698,41 @@ export const products: Product[] = [
       'Aromasız - kolay karıştırma'
     ],
     usage: 'Günde 1 ölçek (3.4g) bol suyla karıştırarak için.',
+    isBestseller: true
+  },
+  {
+    id: '32',
+    name: 'Xtreme Protein Bar 50g - 24 Adet',
+    brand: 'Nutrever',
+    category: 'Protein Tozları',
+    price: 3000,
+    image: nutreverProteinBarImg,
+    rating: 4.8,
+    reviewCount: 189,
+    inStock: true,
+    description: 'Alman menşeli Nutrever Xtreme Protein Bar. 24 adet kutu, Toffee Chocolate aromalı. %50 protein, düşük şeker içeren pratik protein bar.',
+    features: [
+      '25g protein per bar',
+      '%50 protein içeriği',
+      'Düşük şeker',
+      'Toffee Chocolate aroması',
+      '24 adet kutu - 50g per bar'
+    ],
+    nutritionFacts: {
+      servingSize: '50g',
+      servingsPerContainer: 24,
+      calories: 185,
+      protein: 25,
+      carbs: 8,
+      fat: 6
+    },
+    usage: 'Öğünler arası veya antrenman sonrası pratik atıştırmalık olarak tüketin.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Toffee Chocolate']
+      }
+    ],
     isBestseller: true
   }
 ];
