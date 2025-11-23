@@ -10,6 +10,7 @@ import bigjoyCreatineGlutamineImg from '@/assets/product-bigjoy-creatine-glutami
 import bigjoyBcaaProImg from '@/assets/product-bigjoy-bcaa-pro.jpg';
 import bigjoyHydroPumpImg from '@/assets/product-bigjoy-hydro-pump.jpg';
 import bigjoyBcaaRippedImg from '@/assets/product-bigjoy-bcaa-ripped.jpg';
+import bigjoyCreaBigChewImg from '@/assets/product-bigjoy-creabig-chew.jpg';
 
 export const products: Product[] = [
   {
@@ -417,6 +418,27 @@ export const products: Product[] = [
     ],
     usage: 'Antrenman öncesi veya sırasında 1 ölçek (12g) 400ml suya karıştırın.',
     isBestseller: true
+  },
+  {
+    id: '18',
+    name: 'CreaBig CHEW (Çiğnenebilir Kreatin Tablet)',
+    brand: 'Bigjoy Sports',
+    category: 'Amino Asitler',
+    price: 650,
+    image: bigjoyCreaBigChewImg,
+    rating: 4.7,
+    reviewCount: 167,
+    inStock: true,
+    description: 'Çiğnenebilir kreatin tablet. 5000mg kreatin monohidrat içerir, pratik kullanım için ideal. Kiraz aromalı.',
+    features: [
+      '5000mg kreatin monohidrat per porsiyon',
+      'Çiğnenebilir tablet formu',
+      'Kiraz aroması',
+      '120 tablet - 30 porsiyon',
+      'Su ile karıştırmaya gerek yok'
+    ],
+    usage: 'Günde 4 tablet çiğneyerek alın.',
+    isNew: true
   }
 ];
 
