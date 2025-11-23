@@ -60,29 +60,6 @@ export const products: Product[] = [
     isBestseller: true
   },
   {
-    id: '3',
-    name: 'Multivitamin 60 Tablet',
-    brand: 'Nutrever',
-    category: 'Vitaminler',
-    price: 199,
-    originalPrice: 279,
-    discount: 29,
-    image: multivitaminImg,
-    rating: 4.7,
-    reviewCount: 445,
-    inStock: true,
-    description: 'Günlük vitamin ve mineral ihtiyacınızı karşılayan kapsamlı multivitamin desteği.',
-    features: [
-      '23 vitamin ve mineral',
-      'Bağışıklık sistemi desteği',
-      'Enerji metabolizması',
-      '2 aylık kullanım',
-      'Yüksek emilim'
-    ],
-    usage: 'Günde 1 tablet, yemekle birlikte alın.',
-    isNew: true
-  },
-  {
     id: '4',
     name: 'Kreatin Monohidrat 500g',
     brand: 'Nutrend',
