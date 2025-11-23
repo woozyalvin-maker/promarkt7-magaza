@@ -23,6 +23,7 @@ import nutreverWheyIsolateImg from '@/assets/product-nutrever-whey-isolate.jpg';
 import nutreverCarnitineImg from '@/assets/product-nutrever-carnitine.jpg';
 import nutreverBcaaImg from '@/assets/product-nutrever-bcaa.jpg';
 import nutreverAminoImg from '@/assets/product-nutrever-amino.jpg';
+import nutreverCreatineImg from '@/assets/product-nutrever-creatine.jpg';
 
 export const products: Product[] = [
   {
@@ -676,6 +677,27 @@ export const products: Product[] = [
     ],
     usage: 'Günde 3-6 tablet, antrenman öncesi ve sonrası alın.',
     isNew: true
+  },
+  {
+    id: '31',
+    name: '% 100 Creatine Monohydrate Powder 500g',
+    brand: 'Nutrever',
+    category: 'Amino Asitler',
+    price: 2700,
+    image: nutreverCreatineImg,
+    rating: 4.9,
+    reviewCount: 223,
+    inStock: true,
+    description: 'Alman menşeli Nutrever %100 Creatine Monohydrate Powder. Ultra mikronize formül, 500g - 147 servis. Saf kreatin monohidrat, güç ve performans artışı için ideal.',
+    features: [
+      '3.4g kreatin monohidrat per porsiyon',
+      '%100 saf kreatin',
+      'Ultra mikronize formül',
+      '500g - 147 servis',
+      'Aromasız - kolay karıştırma'
+    ],
+    usage: 'Günde 1 ölçek (3.4g) bol suyla karıştırarak için.',
+    isBestseller: true
   }
 ];
 
