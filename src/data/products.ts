@@ -14,6 +14,7 @@ import bigjoyCreaBigChewImg from '@/assets/product-bigjoy-creabig-chew.jpg';
 import olimpBcaaXplodeImg from '@/assets/product-olimp-bcaa-xplode.jpg';
 import olimpWheyComplexImg from '@/assets/product-olimp-whey-complex.jpg';
 import olimpWheyComplexChocoImg from '@/assets/product-olimp-whey-complex-choco.jpg';
+import kevinGoldCreatineImg from '@/assets/product-kevin-gold-creatine.jpg';
 
 export const products: Product[] = [
   {
@@ -488,6 +489,27 @@ export const products: Product[] = [
       }
     ],
     isBestseller: true
+  },
+  {
+    id: '22',
+    name: 'Kevin Levrone Signature Series Gold Creatine 300g',
+    brand: 'Kevin Lovren',
+    category: 'Amino Asitler',
+    price: 1340,
+    image: kevinGoldCreatineImg,
+    rating: 4.8,
+    reviewCount: 89,
+    inStock: true,
+    description: 'Kevin Levrone imzalı Gold Line serisi kreatin monohidrat. Maksimum fiziksel güç ve performans için aromasız formül.',
+    features: [
+      'Saf kreatin monohidrat',
+      'Maksimum güç artışı',
+      'Aromasız - stack için ideal',
+      '300g - 60 porsiyon',
+      'Gold Line serisi'
+    ],
+    usage: 'Günde 1 ölçek (5g) bol suyla karıştırarak için.',
+    isNew: true
   }
 ];
 
