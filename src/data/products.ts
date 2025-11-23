@@ -21,6 +21,7 @@ import kevinGoldTribulusImg from '@/assets/product-kevin-gold-tribulus.jpg';
 import kevinGoldGlutamineImg from '@/assets/product-kevin-gold-glutamine.jpg';
 import nutreverWheyIsolateImg from '@/assets/product-nutrever-whey-isolate.jpg';
 import nutreverCarnitineImg from '@/assets/product-nutrever-carnitine.jpg';
+import nutreverBcaaImg from '@/assets/product-nutrever-bcaa.jpg';
 
 export const products: Product[] = [
   {
@@ -623,6 +624,33 @@ export const products: Product[] = [
       {
         name: 'Aroma',
         options: ['Peach (Şeftali)']
+      }
+    ],
+    isNew: true
+  },
+  {
+    id: '29',
+    name: 'BCAA Powder 500g - Ice Tea Peach',
+    brand: 'Nutrever',
+    category: 'Amino Asitler',
+    price: 975,
+    image: nutreverBcaaImg,
+    rating: 4.8,
+    reviewCount: 194,
+    inStock: true,
+    description: 'Alman menşeli Nutrever BCAA Powder instant formül. 500g şeftali aromalı (Ice Tea Peach), 2:1:1 oranında BCAA içerir. Kas koruması ve toparlanma için ideal.',
+    features: [
+      '8g BCAA 2:1:1 oranı per porsiyon',
+      'Instant formül - kolay çözülür',
+      'Ice Tea Peach aroması',
+      '500g - 50 porsiyon',
+      'Alman menşeli kalite'
+    ],
+    usage: 'Antrenman öncesi veya sırasında 1 ölçek (10g) 300-400ml suya karıştırın.',
+    variants: [
+      {
+        name: 'Aroma',
+        options: ['Ice Tea Peach']
       }
     ],
     isNew: true
